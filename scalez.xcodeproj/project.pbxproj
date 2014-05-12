@@ -48,6 +48,10 @@
 		CF0A3AB0192014780073F6C5 /* scalezTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "scalezTests-Info.plist"; sourceTree = "<group>"; };
 		CF0A3AB2192014780073F6C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF0A3AB4192014780073F6C5 /* scalezTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = scalezTests.m; sourceTree = "<group>"; };
+		CF0A3ABE192015810073F6C5 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		CF0A3ABF192015810073F6C5 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		CF0A3AC0192015CA0073F6C5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CF0A3AC1192015CA0073F6C5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jorge Moura";
 				TargetAttributes = {
+					CF0A3A8B192014780073F6C5 = {
+						DevelopmentTeam = 6CHZFW8V57;
+					};
 					CF0A3AA6192014780073F6C5 = {
 						TestTargetID = CF0A3A8B192014780073F6C5;
 					};
@@ -203,6 +210,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"pt-PT",
+				es,
 			);
 			mainGroup = CF0A3A83192014780073F6C5;
 			productRefGroup = CF0A3A8D192014780073F6C5 /* Products */;
@@ -268,6 +277,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				CF0A3A99192014780073F6C5 /* en */,
+				CF0A3ABE192015810073F6C5 /* pt-PT */,
+				CF0A3AC0192015CA0073F6C5 /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -276,6 +287,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				CF0A3AB2192014780073F6C5 /* en */,
+				CF0A3ABF192015810073F6C5 /* pt-PT */,
+				CF0A3AC1192015CA0073F6C5 /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -360,10 +373,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "scalez/scalez-Prefix.pch";
 				INFOPLIST_FILE = "scalez/scalez-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -373,10 +389,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "scalez/scalez-Prefix.pch";
 				INFOPLIST_FILE = "scalez/scalez-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
