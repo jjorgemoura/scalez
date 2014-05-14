@@ -8,12 +8,27 @@
 
 #import "ZDAppDelegate.h"
 
+#import "ZDScale.h"
+#import "ZDNote.h"
+#import "ZDScaleType.h"
+
+
 @implementation ZDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    ZDScaleType *scaleType = [[ZDScaleType list] objectAtIndex:0];
+    ZDNote *note = [[ZDNote alloc] initWithNote:1];
+    
+    ZDScale *x = [[ZDScale alloc] init];
+    [x setZdNote:note];
+    [x setZdScaleType:scaleType];
+    [x processScale];
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

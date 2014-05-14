@@ -19,6 +19,13 @@
 		CF0A3AAB192014780073F6C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF0A3A93192014780073F6C5 /* UIKit.framework */; };
 		CF0A3AB3192014780073F6C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF0A3AB1192014780073F6C5 /* InfoPlist.strings */; };
 		CF0A3AB5192014780073F6C5 /* scalezTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0A3AB4192014780073F6C5 /* scalezTests.m */; };
+		CF6AEB4B192135D4006DE87B /* ZDNote.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB4A192135D4006DE87B /* ZDNote.m */; };
+		CF6AEB4E192135FE006DE87B /* ZDScaleType.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB4D192135FE006DE87B /* ZDScaleType.m */; };
+		CF6AEB5119213608006DE87B /* ZDScale.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB5019213608006DE87B /* ZDScale.m */; };
+		CF6AEB5419213615006DE87B /* ZDChordType.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB5319213615006DE87B /* ZDChordType.m */; };
+		CF6AEB5719213621006DE87B /* ZDChord.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB5619213621006DE87B /* ZDChord.m */; };
+		CF6AEB5A1921364B006DE87B /* ZDTetrad.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB591921364B006DE87B /* ZDTetrad.m */; };
+		CF6AEB5D19213655006DE87B /* ZDTetradType.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB5C19213655006DE87B /* ZDTetradType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +59,20 @@
 		CF0A3ABF192015810073F6C5 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		CF0A3AC0192015CA0073F6C5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF0A3AC1192015CA0073F6C5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CF6AEB49192135D4006DE87B /* ZDNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDNote.h; sourceTree = "<group>"; };
+		CF6AEB4A192135D4006DE87B /* ZDNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDNote.m; sourceTree = "<group>"; };
+		CF6AEB4C192135FE006DE87B /* ZDScaleType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDScaleType.h; sourceTree = "<group>"; };
+		CF6AEB4D192135FE006DE87B /* ZDScaleType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDScaleType.m; sourceTree = "<group>"; };
+		CF6AEB4F19213608006DE87B /* ZDScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDScale.h; sourceTree = "<group>"; };
+		CF6AEB5019213608006DE87B /* ZDScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDScale.m; sourceTree = "<group>"; };
+		CF6AEB5219213615006DE87B /* ZDChordType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDChordType.h; sourceTree = "<group>"; };
+		CF6AEB5319213615006DE87B /* ZDChordType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDChordType.m; sourceTree = "<group>"; };
+		CF6AEB5519213621006DE87B /* ZDChord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDChord.h; sourceTree = "<group>"; };
+		CF6AEB5619213621006DE87B /* ZDChord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDChord.m; sourceTree = "<group>"; };
+		CF6AEB581921364B006DE87B /* ZDTetrad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDTetrad.h; sourceTree = "<group>"; };
+		CF6AEB591921364B006DE87B /* ZDTetrad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDTetrad.m; sourceTree = "<group>"; };
+		CF6AEB5B19213655006DE87B /* ZDTetradType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDTetradType.h; sourceTree = "<group>"; };
+		CF6AEB5C19213655006DE87B /* ZDTetradType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDTetradType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +132,8 @@
 		CF0A3A95192014780073F6C5 /* scalez */ = {
 			isa = PBXGroup;
 			children = (
+				CF6AEB38192133BE006DE87B /* classes */,
+				CF6AEB4219213448006DE87B /* ui */,
 				CF0A3A9E192014780073F6C5 /* ZDAppDelegate.h */,
 				CF0A3A9F192014780073F6C5 /* ZDAppDelegate.m */,
 				CF0A3AA1192014780073F6C5 /* Images.xcassets */,
@@ -146,6 +169,131 @@
 				CF0A3AB1192014780073F6C5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF6AEB38192133BE006DE87B /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				CF6AEB3C1921340E006DE87B /* model */,
+				CF6AEB39192133E3006DE87B /* controller */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		CF6AEB39192133E3006DE87B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF6AEB3A192133F2006DE87B /* frameworks */,
+				CF6AEB3B192133FD006DE87B /* viewcontroller */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		CF6AEB3A192133F2006DE87B /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		CF6AEB3B192133FD006DE87B /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewcontroller;
+			sourceTree = "<group>";
+		};
+		CF6AEB3C1921340E006DE87B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CF6AEB3D19213415006DE87B /* domain */,
+				CF6AEB3E1921341D006DE87B /* support */,
+				CF6AEB3F19213427006DE87B /* utils */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		CF6AEB3D19213415006DE87B /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				CF6AEB4019213431006DE87B /* interfaces */,
+				CF6AEB411921343A006DE87B /* enum */,
+				CF6AEB49192135D4006DE87B /* ZDNote.h */,
+				CF6AEB4A192135D4006DE87B /* ZDNote.m */,
+				CF6AEB4C192135FE006DE87B /* ZDScaleType.h */,
+				CF6AEB4D192135FE006DE87B /* ZDScaleType.m */,
+				CF6AEB5219213615006DE87B /* ZDChordType.h */,
+				CF6AEB5319213615006DE87B /* ZDChordType.m */,
+				CF6AEB5B19213655006DE87B /* ZDTetradType.h */,
+				CF6AEB5C19213655006DE87B /* ZDTetradType.m */,
+				CF6AEB5519213621006DE87B /* ZDChord.h */,
+				CF6AEB5619213621006DE87B /* ZDChord.m */,
+				CF6AEB581921364B006DE87B /* ZDTetrad.h */,
+				CF6AEB591921364B006DE87B /* ZDTetrad.m */,
+				CF6AEB4F19213608006DE87B /* ZDScale.h */,
+				CF6AEB5019213608006DE87B /* ZDScale.m */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		CF6AEB3E1921341D006DE87B /* support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
+		CF6AEB3F19213427006DE87B /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		CF6AEB4019213431006DE87B /* interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interfaces;
+			sourceTree = "<group>";
+		};
+		CF6AEB411921343A006DE87B /* enum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = enum;
+			sourceTree = "<group>";
+		};
+		CF6AEB4219213448006DE87B /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				CF6AEB4519213463006DE87B /* view */,
+				CF6AEB441921345F006DE87B /* icons */,
+				CF6AEB4319213455006DE87B /* images */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		CF6AEB4319213455006DE87B /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		CF6AEB441921345F006DE87B /* icons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+		CF6AEB4519213463006DE87B /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +397,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6AEB4E192135FE006DE87B /* ZDScaleType.m in Sources */,
+				CF6AEB5119213608006DE87B /* ZDScale.m in Sources */,
+				CF6AEB5719213621006DE87B /* ZDChord.m in Sources */,
 				CF0A3AA0192014780073F6C5 /* ZDAppDelegate.m in Sources */,
+				CF6AEB5D19213655006DE87B /* ZDTetradType.m in Sources */,
 				CF0A3A9C192014780073F6C5 /* main.m in Sources */,
+				CF6AEB5419213615006DE87B /* ZDChordType.m in Sources */,
+				CF6AEB4B192135D4006DE87B /* ZDNote.m in Sources */,
+				CF6AEB5A1921364B006DE87B /* ZDTetrad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +614,7 @@
 				CF0A3ABA192014780073F6C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF0A3ABB192014780073F6C5 /* Build configuration list for PBXNativeTarget "scalezTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +623,7 @@
 				CF0A3ABD192014780073F6C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
