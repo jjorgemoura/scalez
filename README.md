@@ -9,7 +9,14 @@ In each scale detail it is presented information about the scale notes, harmonic
 See the code.
 
 ## How to install
-Download, compine and run it.
+
+Source Code: 
+
+Download, compile and run it.
+
+Binary:
+
+Download it from App Store.
 
 ## How to use
 Run it!
@@ -41,13 +48,26 @@ In developing.
 Soon...
 
 ## Technical requirements
-Soon...
+
+**OS:** iOS6
+
+
 
 ## Troubleshooting
 Soon...
 
 ## Changelog
-In developing.
+
+###### Version: 0.1
+Launch date: 2014-06-xx
+
+Features:
+
+- Scales 
+- Notes by scale
+- Chords by scale
+
+
 
 ## License
 
