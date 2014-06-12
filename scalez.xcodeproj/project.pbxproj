@@ -12,20 +12,32 @@
 		CF0A3A94192014780073F6C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF0A3A93192014780073F6C5 /* UIKit.framework */; };
 		CF0A3A9A192014780073F6C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF0A3A98192014780073F6C5 /* InfoPlist.strings */; };
 		CF0A3A9C192014780073F6C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0A3A9B192014780073F6C5 /* main.m */; };
-		CF0A3AA0192014780073F6C5 /* ZDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0A3A9F192014780073F6C5 /* ZDAppDelegate.m */; };
 		CF0A3AA2192014780073F6C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0A3AA1192014780073F6C5 /* Images.xcassets */; };
 		CF0A3AA9192014780073F6C5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF0A3AA8192014780073F6C5 /* XCTest.framework */; };
 		CF0A3AAA192014780073F6C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF0A3A8F192014780073F6C5 /* Foundation.framework */; };
 		CF0A3AAB192014780073F6C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF0A3A93192014780073F6C5 /* UIKit.framework */; };
 		CF0A3AB3192014780073F6C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF0A3AB1192014780073F6C5 /* InfoPlist.strings */; };
 		CF0A3AB5192014780073F6C5 /* scalezTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0A3AB4192014780073F6C5 /* scalezTests.m */; };
-		CF6AEB4B192135D4006DE87B /* ZDNote.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB4A192135D4006DE87B /* ZDNote.m */; };
-		CF6AEB4E192135FE006DE87B /* ZDScaleType.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB4D192135FE006DE87B /* ZDScaleType.m */; };
-		CF6AEB5119213608006DE87B /* ZDScale.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB5019213608006DE87B /* ZDScale.m */; };
-		CF6AEB5419213615006DE87B /* ZDChordType.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB5319213615006DE87B /* ZDChordType.m */; };
-		CF6AEB5719213621006DE87B /* ZDChord.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB5619213621006DE87B /* ZDChord.m */; };
-		CF6AEB5A1921364B006DE87B /* ZDTetrad.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB591921364B006DE87B /* ZDTetrad.m */; };
-		CF6AEB5D19213655006DE87B /* ZDTetradType.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6AEB5C19213655006DE87B /* ZDTetradType.m */; };
+		CF2476CA1945FB00005387FC /* ZDChord.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2476BD1945FB00005387FC /* ZDChord.m */; };
+		CF2476CB1945FB00005387FC /* ZDChordType.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2476BF1945FB00005387FC /* ZDChordType.m */; };
+		CF2476CC1945FB00005387FC /* ZDNote.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2476C11945FB00005387FC /* ZDNote.m */; };
+		CF2476CD1945FB00005387FC /* ZDScale.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2476C31945FB00005387FC /* ZDScale.m */; };
+		CF2476CE1945FB00005387FC /* ZDScaleType.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2476C51945FB00005387FC /* ZDScaleType.m */; };
+		CF2476CF1945FB00005387FC /* ZDTetrad.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2476C71945FB00005387FC /* ZDTetrad.m */; };
+		CF2476D01945FB00005387FC /* ZDTetradType.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2476C91945FB00005387FC /* ZDTetradType.m */; };
+		CF2476DA1945FB2E005387FC /* ZDChordViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2476D31945FB2E005387FC /* ZDChordViewerController.m */; };
+		CF2476DB1945FB2E005387FC /* ZDMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2476D51945FB2E005387FC /* ZDMainController.m */; };
+		CF2476DC1945FB2E005387FC /* ZDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2476D71945FB2E005387FC /* ZDMenuController.m */; };
+		CF2476DD1945FB2E005387FC /* ZDScaleSelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2476D91945FB2E005387FC /* ZDScaleSelectorController.m */; };
+		CF2476E11945FB44005387FC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2476E01945FB44005387FC /* SWRevealViewController.m */; };
+		CF2476E41945FBBD005387FC /* ZDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2476E31945FBBD005387FC /* ZDAppDelegate.m */; };
+		CF2476E81945FC61005387FC /* Storyboard_iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2476E71945FC61005387FC /* Storyboard_iphone.storyboard */; };
+		CF2476EA1945FC72005387FC /* Storyboard_ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2476E91945FC72005387FC /* Storyboard_ipad.storyboard */; };
+		CF2476ED194610C3005387FC /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2476EB194610C3005387FC /* reveal-icon.png */; };
+		CF2476EE194610C3005387FC /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2476EC194610C3005387FC /* reveal-icon@2x.png */; };
+		CF694E831940C6A90069A55D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF694E821940C6A90069A55D /* Settings.bundle */; };
+		CF7396E719475E3400E5E4C4 /* 12-eye.png in Resources */ = {isa = PBXBuildFile; fileRef = CF7396E519475E3400E5E4C4 /* 12-eye.png */; };
+		CF7396E819475E3400E5E4C4 /* 13-target.png in Resources */ = {isa = PBXBuildFile; fileRef = CF7396E619475E3400E5E4C4 /* 13-target.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +59,6 @@
 		CF0A3A99192014780073F6C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF0A3A9B192014780073F6C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF0A3A9D192014780073F6C5 /* scalez-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "scalez-Prefix.pch"; sourceTree = "<group>"; };
-		CF0A3A9E192014780073F6C5 /* ZDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDAppDelegate.h; sourceTree = "<group>"; };
-		CF0A3A9F192014780073F6C5 /* ZDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDAppDelegate.m; sourceTree = "<group>"; };
 		CF0A3AA1192014780073F6C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF0A3AA7192014780073F6C5 /* scalezTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = scalezTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0A3AA8192014780073F6C5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -59,20 +69,39 @@
 		CF0A3ABF192015810073F6C5 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		CF0A3AC0192015CA0073F6C5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF0A3AC1192015CA0073F6C5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CF6AEB49192135D4006DE87B /* ZDNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDNote.h; sourceTree = "<group>"; };
-		CF6AEB4A192135D4006DE87B /* ZDNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDNote.m; sourceTree = "<group>"; };
-		CF6AEB4C192135FE006DE87B /* ZDScaleType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDScaleType.h; sourceTree = "<group>"; };
-		CF6AEB4D192135FE006DE87B /* ZDScaleType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDScaleType.m; sourceTree = "<group>"; };
-		CF6AEB4F19213608006DE87B /* ZDScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDScale.h; sourceTree = "<group>"; };
-		CF6AEB5019213608006DE87B /* ZDScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDScale.m; sourceTree = "<group>"; };
-		CF6AEB5219213615006DE87B /* ZDChordType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDChordType.h; sourceTree = "<group>"; };
-		CF6AEB5319213615006DE87B /* ZDChordType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDChordType.m; sourceTree = "<group>"; };
-		CF6AEB5519213621006DE87B /* ZDChord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDChord.h; sourceTree = "<group>"; };
-		CF6AEB5619213621006DE87B /* ZDChord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDChord.m; sourceTree = "<group>"; };
-		CF6AEB581921364B006DE87B /* ZDTetrad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDTetrad.h; sourceTree = "<group>"; };
-		CF6AEB591921364B006DE87B /* ZDTetrad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDTetrad.m; sourceTree = "<group>"; };
-		CF6AEB5B19213655006DE87B /* ZDTetradType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDTetradType.h; sourceTree = "<group>"; };
-		CF6AEB5C19213655006DE87B /* ZDTetradType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDTetradType.m; sourceTree = "<group>"; };
+		CF2476BC1945FB00005387FC /* ZDChord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDChord.h; sourceTree = "<group>"; };
+		CF2476BD1945FB00005387FC /* ZDChord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDChord.m; sourceTree = "<group>"; };
+		CF2476BE1945FB00005387FC /* ZDChordType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDChordType.h; sourceTree = "<group>"; };
+		CF2476BF1945FB00005387FC /* ZDChordType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDChordType.m; sourceTree = "<group>"; };
+		CF2476C01945FB00005387FC /* ZDNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDNote.h; sourceTree = "<group>"; };
+		CF2476C11945FB00005387FC /* ZDNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDNote.m; sourceTree = "<group>"; };
+		CF2476C21945FB00005387FC /* ZDScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDScale.h; sourceTree = "<group>"; };
+		CF2476C31945FB00005387FC /* ZDScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDScale.m; sourceTree = "<group>"; };
+		CF2476C41945FB00005387FC /* ZDScaleType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDScaleType.h; sourceTree = "<group>"; };
+		CF2476C51945FB00005387FC /* ZDScaleType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDScaleType.m; sourceTree = "<group>"; };
+		CF2476C61945FB00005387FC /* ZDTetrad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDTetrad.h; sourceTree = "<group>"; };
+		CF2476C71945FB00005387FC /* ZDTetrad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDTetrad.m; sourceTree = "<group>"; };
+		CF2476C81945FB00005387FC /* ZDTetradType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDTetradType.h; sourceTree = "<group>"; };
+		CF2476C91945FB00005387FC /* ZDTetradType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDTetradType.m; sourceTree = "<group>"; };
+		CF2476D21945FB2E005387FC /* ZDChordViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDChordViewerController.h; sourceTree = "<group>"; };
+		CF2476D31945FB2E005387FC /* ZDChordViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDChordViewerController.m; sourceTree = "<group>"; };
+		CF2476D41945FB2E005387FC /* ZDMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDMainController.h; sourceTree = "<group>"; };
+		CF2476D51945FB2E005387FC /* ZDMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDMainController.m; sourceTree = "<group>"; };
+		CF2476D61945FB2E005387FC /* ZDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDMenuController.h; sourceTree = "<group>"; };
+		CF2476D71945FB2E005387FC /* ZDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDMenuController.m; sourceTree = "<group>"; };
+		CF2476D81945FB2E005387FC /* ZDScaleSelectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDScaleSelectorController.h; sourceTree = "<group>"; };
+		CF2476D91945FB2E005387FC /* ZDScaleSelectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDScaleSelectorController.m; sourceTree = "<group>"; };
+		CF2476DF1945FB44005387FC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		CF2476E01945FB44005387FC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		CF2476E21945FBBD005387FC /* ZDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDAppDelegate.h; sourceTree = "<group>"; };
+		CF2476E31945FBBD005387FC /* ZDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDAppDelegate.m; sourceTree = "<group>"; };
+		CF2476E71945FC61005387FC /* Storyboard_iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iphone.storyboard; sourceTree = "<group>"; };
+		CF2476E91945FC72005387FC /* Storyboard_ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_ipad.storyboard; sourceTree = "<group>"; };
+		CF2476EB194610C3005387FC /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
+		CF2476EC194610C3005387FC /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
+		CF694E821940C6A90069A55D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		CF7396E519475E3400E5E4C4 /* 12-eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12-eye.png"; sourceTree = "<group>"; };
+		CF7396E619475E3400E5E4C4 /* 13-target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "13-target.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,11 +161,10 @@
 		CF0A3A95192014780073F6C5 /* scalez */ = {
 			isa = PBXGroup;
 			children = (
-				CF6AEB38192133BE006DE87B /* classes */,
-				CF6AEB4219213448006DE87B /* ui */,
-				CF0A3A9E192014780073F6C5 /* ZDAppDelegate.h */,
-				CF0A3A9F192014780073F6C5 /* ZDAppDelegate.m */,
-				CF0A3AA1192014780073F6C5 /* Images.xcassets */,
+				CF2476B91945FAA9005387FC /* model */,
+				CF2476BB1945FAD2005387FC /* controller */,
+				CF2476BA1945FACC005387FC /* view */,
+				CF2476E51945FBE8005387FC /* others */,
 				CF0A3A96192014780073F6C5 /* Supporting Files */,
 			);
 			path = scalez;
@@ -145,10 +173,14 @@
 		CF0A3A96192014780073F6C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CF0A3A97192014780073F6C5 /* scalez-Info.plist */,
-				CF0A3A98192014780073F6C5 /* InfoPlist.strings */,
+				CF2476E21945FBBD005387FC /* ZDAppDelegate.h */,
+				CF2476E31945FBBD005387FC /* ZDAppDelegate.m */,
 				CF0A3A9B192014780073F6C5 /* main.m */,
 				CF0A3A9D192014780073F6C5 /* scalez-Prefix.pch */,
+				CF0A3AA1192014780073F6C5 /* Images.xcassets */,
+				CF0A3A97192014780073F6C5 /* scalez-Info.plist */,
+				CF0A3A98192014780073F6C5 /* InfoPlist.strings */,
+				CF694E821940C6A90069A55D /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -171,129 +203,87 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CF6AEB38192133BE006DE87B /* classes */ = {
+		CF2476B91945FAA9005387FC /* model */ = {
 			isa = PBXGroup;
 			children = (
-				CF6AEB3C1921340E006DE87B /* model */,
-				CF6AEB39192133E3006DE87B /* controller */,
-			);
-			path = classes;
-			sourceTree = "<group>";
-		};
-		CF6AEB39192133E3006DE87B /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				CF6AEB3A192133F2006DE87B /* frameworks */,
-				CF6AEB3B192133FD006DE87B /* viewcontroller */,
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		CF6AEB3A192133F2006DE87B /* frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = frameworks;
-			sourceTree = "<group>";
-		};
-		CF6AEB3B192133FD006DE87B /* viewcontroller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = viewcontroller;
-			sourceTree = "<group>";
-		};
-		CF6AEB3C1921340E006DE87B /* model */ = {
-			isa = PBXGroup;
-			children = (
-				CF6AEB3D19213415006DE87B /* domain */,
-				CF6AEB3E1921341D006DE87B /* support */,
-				CF6AEB3F19213427006DE87B /* utils */,
+				CF2476D11945FB07005387FC /* protocols */,
+				CF2476BE1945FB00005387FC /* ZDChordType.h */,
+				CF2476BF1945FB00005387FC /* ZDChordType.m */,
+				CF2476BC1945FB00005387FC /* ZDChord.h */,
+				CF2476BD1945FB00005387FC /* ZDChord.m */,
+				CF2476C81945FB00005387FC /* ZDTetradType.h */,
+				CF2476C91945FB00005387FC /* ZDTetradType.m */,
+				CF2476C61945FB00005387FC /* ZDTetrad.h */,
+				CF2476C71945FB00005387FC /* ZDTetrad.m */,
+				CF2476C41945FB00005387FC /* ZDScaleType.h */,
+				CF2476C51945FB00005387FC /* ZDScaleType.m */,
+				CF2476C21945FB00005387FC /* ZDScale.h */,
+				CF2476C31945FB00005387FC /* ZDScale.m */,
+				CF2476C01945FB00005387FC /* ZDNote.h */,
+				CF2476C11945FB00005387FC /* ZDNote.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
 		};
-		CF6AEB3D19213415006DE87B /* domain */ = {
+		CF2476BA1945FACC005387FC /* view */ = {
 			isa = PBXGroup;
 			children = (
-				CF6AEB4019213431006DE87B /* interfaces */,
-				CF6AEB411921343A006DE87B /* enum */,
-				CF6AEB49192135D4006DE87B /* ZDNote.h */,
-				CF6AEB4A192135D4006DE87B /* ZDNote.m */,
-				CF6AEB4C192135FE006DE87B /* ZDScaleType.h */,
-				CF6AEB4D192135FE006DE87B /* ZDScaleType.m */,
-				CF6AEB5219213615006DE87B /* ZDChordType.h */,
-				CF6AEB5319213615006DE87B /* ZDChordType.m */,
-				CF6AEB5B19213655006DE87B /* ZDTetradType.h */,
-				CF6AEB5C19213655006DE87B /* ZDTetradType.m */,
-				CF6AEB5519213621006DE87B /* ZDChord.h */,
-				CF6AEB5619213621006DE87B /* ZDChord.m */,
-				CF6AEB581921364B006DE87B /* ZDTetrad.h */,
-				CF6AEB591921364B006DE87B /* ZDTetrad.m */,
-				CF6AEB4F19213608006DE87B /* ZDScale.h */,
-				CF6AEB5019213608006DE87B /* ZDScale.m */,
+				CF2476E71945FC61005387FC /* Storyboard_iphone.storyboard */,
+				CF2476E91945FC72005387FC /* Storyboard_ipad.storyboard */,
 			);
-			path = domain;
+			path = view;
 			sourceTree = "<group>";
 		};
-		CF6AEB3E1921341D006DE87B /* support */ = {
+		CF2476BB1945FAD2005387FC /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF2476DE1945FB33005387FC /* frameworks */,
+				CF2476D41945FB2E005387FC /* ZDMainController.h */,
+				CF2476D51945FB2E005387FC /* ZDMainController.m */,
+				CF2476D61945FB2E005387FC /* ZDMenuController.h */,
+				CF2476D71945FB2E005387FC /* ZDMenuController.m */,
+				CF2476D81945FB2E005387FC /* ZDScaleSelectorController.h */,
+				CF2476D91945FB2E005387FC /* ZDScaleSelectorController.m */,
+				CF2476D21945FB2E005387FC /* ZDChordViewerController.h */,
+				CF2476D31945FB2E005387FC /* ZDChordViewerController.m */,
 			);
-			path = support;
+			name = controller;
+			path = controllers;
 			sourceTree = "<group>";
 		};
-		CF6AEB3F19213427006DE87B /* utils */ = {
+		CF2476D11945FB07005387FC /* protocols */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = utils;
+			path = protocols;
 			sourceTree = "<group>";
 		};
-		CF6AEB4019213431006DE87B /* interfaces */ = {
+		CF2476DE1945FB33005387FC /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF2476DF1945FB44005387FC /* SWRevealViewController.h */,
+				CF2476E01945FB44005387FC /* SWRevealViewController.m */,
 			);
-			path = interfaces;
+			path = frameworks;
 			sourceTree = "<group>";
 		};
-		CF6AEB411921343A006DE87B /* enum */ = {
+		CF2476E51945FBE8005387FC /* others */ = {
 			isa = PBXGroup;
 			children = (
+				CF2476E61945FC02005387FC /* images */,
 			);
-			path = enum;
+			path = others;
 			sourceTree = "<group>";
 		};
-		CF6AEB4219213448006DE87B /* ui */ = {
+		CF2476E61945FC02005387FC /* images */ = {
 			isa = PBXGroup;
 			children = (
-				CF6AEB4519213463006DE87B /* view */,
-				CF6AEB441921345F006DE87B /* icons */,
-				CF6AEB4319213455006DE87B /* images */,
-			);
-			path = ui;
-			sourceTree = "<group>";
-		};
-		CF6AEB4319213455006DE87B /* images */ = {
-			isa = PBXGroup;
-			children = (
+				CF7396E519475E3400E5E4C4 /* 12-eye.png */,
+				CF7396E619475E3400E5E4C4 /* 13-target.png */,
+				CF2476EB194610C3005387FC /* reveal-icon.png */,
+				CF2476EC194610C3005387FC /* reveal-icon@2x.png */,
 			);
 			path = images;
-			sourceTree = "<group>";
-		};
-		CF6AEB441921345F006DE87B /* icons */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = icons;
-			sourceTree = "<group>";
-		};
-		CF6AEB4519213463006DE87B /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = view;
-			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,8 +368,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF7396E719475E3400E5E4C4 /* 12-eye.png in Resources */,
+				CF2476EA1945FC72005387FC /* Storyboard_ipad.storyboard in Resources */,
+				CF694E831940C6A90069A55D /* Settings.bundle in Resources */,
+				CF7396E819475E3400E5E4C4 /* 13-target.png in Resources */,
+				CF2476EE194610C3005387FC /* reveal-icon@2x.png in Resources */,
 				CF0A3A9A192014780073F6C5 /* InfoPlist.strings in Resources */,
+				CF2476E81945FC61005387FC /* Storyboard_iphone.storyboard in Resources */,
 				CF0A3AA2192014780073F6C5 /* Images.xcassets in Resources */,
+				CF2476ED194610C3005387FC /* reveal-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,15 +412,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF6AEB4E192135FE006DE87B /* ZDScaleType.m in Sources */,
-				CF6AEB5119213608006DE87B /* ZDScale.m in Sources */,
-				CF6AEB5719213621006DE87B /* ZDChord.m in Sources */,
-				CF0A3AA0192014780073F6C5 /* ZDAppDelegate.m in Sources */,
-				CF6AEB5D19213655006DE87B /* ZDTetradType.m in Sources */,
+				CF2476E11945FB44005387FC /* SWRevealViewController.m in Sources */,
+				CF2476CE1945FB00005387FC /* ZDScaleType.m in Sources */,
+				CF2476DA1945FB2E005387FC /* ZDChordViewerController.m in Sources */,
+				CF2476CF1945FB00005387FC /* ZDTetrad.m in Sources */,
+				CF2476CA1945FB00005387FC /* ZDChord.m in Sources */,
+				CF2476DC1945FB2E005387FC /* ZDMenuController.m in Sources */,
+				CF2476DD1945FB2E005387FC /* ZDScaleSelectorController.m in Sources */,
+				CF2476CD1945FB00005387FC /* ZDScale.m in Sources */,
+				CF2476CB1945FB00005387FC /* ZDChordType.m in Sources */,
+				CF2476DB1945FB2E005387FC /* ZDMainController.m in Sources */,
+				CF2476E41945FBBD005387FC /* ZDAppDelegate.m in Sources */,
+				CF2476D01945FB00005387FC /* ZDTetradType.m in Sources */,
 				CF0A3A9C192014780073F6C5 /* main.m in Sources */,
-				CF6AEB5419213615006DE87B /* ZDChordType.m in Sources */,
-				CF6AEB4B192135D4006DE87B /* ZDNote.m in Sources */,
-				CF6AEB5A1921364B006DE87B /* ZDTetrad.m in Sources */,
+				CF2476CC1945FB00005387FC /* ZDNote.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +489,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 102;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -527,7 +529,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 102;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -552,7 +554,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "scalez/scalez-Prefix.pch";
 				INFOPLIST_FILE = "scalez/scalez-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -568,7 +570,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "scalez/scalez-Prefix.pch";
 				INFOPLIST_FILE = "scalez/scalez-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

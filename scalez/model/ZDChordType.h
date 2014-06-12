@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
 #import "ZDNote.h"
+
 
 @interface ZDChordType : NSObject
 
@@ -25,9 +25,6 @@
 
 - (instancetype)initWithID:(NSNumber *)chordID type:(NSString *)type andIntervals:(NSDictionary *)intervals;
 
-
 - (NSInteger)chordNotesQuantity;
-
-
 
 @end

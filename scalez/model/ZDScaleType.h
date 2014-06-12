@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface ZDScaleType : NSObject
 
 
@@ -22,8 +23,6 @@
 
 - (instancetype)initWithID:(NSNumber *)scaleID type:(NSString *)type andIntervals:(NSDictionary *)intervals;
 
-
 - (NSInteger)scaleNotesQuantity;
-
 
 @end

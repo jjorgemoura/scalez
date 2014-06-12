@@ -48,8 +48,6 @@
         
         nextNote = [ZDNote noteWithHalfSteps:[scaleNoteIntervalValue intValue] fromNote:nextNote];
         i++;
-        
-        //NSLog(@"LOG1: %zu", [nextNote note]);
     }
     
     
@@ -63,7 +61,7 @@
     
     
 
-    NSLog(@"LOG1: %zu", [_notes count]);
+    NSLog(@"LOG1: %zu", (unsigned long)[_notes count]);
 }
 
 - (NSArray *)scaleNotes {

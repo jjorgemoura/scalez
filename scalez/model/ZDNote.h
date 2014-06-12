@@ -30,11 +30,14 @@ typedef NS_ENUM(NSInteger, ZDMusicNote) {
 @interface ZDNote : NSObject
 
 
-@property (readonly) ZDMusicNote note;
+@property (nonatomic, readonly) NSInteger note;
 
++ (NSArray *)list;
 + (ZDNote *)noteWithHalfSteps:(NSInteger)halfsteps fromNote:(ZDNote *)note;
+
 
 - (instancetype)initWithNote:(ZDMusicNote)note;
 
+- (NSString *)description;
 
 @end

@@ -30,5 +30,4 @@
 - (NSArray *)scaleChords;
 - (NSArray *)scaleTetrads;
 
-
 @end

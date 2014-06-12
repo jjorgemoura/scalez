@@ -8,18 +8,32 @@
 
 #import "ZDAppDelegate.h"
 
-#import "ZDScale.h"
-#import "ZDNote.h"
-#import "ZDScaleType.h"
+
+@interface ZDAppDelegate()
+//<SWRevealViewControllerDelegate>
+
+//Private methods
+//- (NSString*)stringFromFrontViewPosition:(FrontViewPosition)position;
+
+@end
+
 
 
 @implementation ZDAppDelegate
 
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+#pragma mark - UIApplicationDelegate implementation Methods
+//---------------------------------------------------------------------------------------
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    
+    
     // Override point for customization after application launch.
     
+    /* TO REMOVE
     ZDScaleType *scaleType = [[ZDScaleType list] objectAtIndex:0];
     ZDNote *note = [[ZDNote alloc] initWithNote:1];
     
@@ -27,10 +41,35 @@
     [x setZdNote:note];
     [x setZdScaleType:scaleType];
     [x processScale];
+    */
     
     
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    
+    //View Controllers
+    /*
+    ZDMainController *mainViewController = [[ZDMainController alloc] initWithCollectionViewLayout:nil];
+	ZDMenuController *menuViewController = [[ZDMenuController alloc] init];
+    
+    
+	UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    UINavigationController *menuNavigationController = [[UINavigationController alloc] initWithRootViewController:menuNavigationController];
+    
+    
+    
+    //Skeleton View Controller
+    SWRevealViewController *revealViewController = [[SWRevealViewController alloc] initWithRearViewController:menuNavigationController frontViewController:frontNavigationController];
+    [revealViewController setDelegate:self];
+    
+    [self setSkeletonController:revealViewController];
+    [[self window] setRootViewController:[self skeletonController]];
+    */
+    
+    
+    
+    
+    //Back to Apple
+    //self.window.backgroundColor = [UIColor whiteColor];
+    //[self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -60,5 +99,67 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
+/*
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+#pragma mark - SERevealViewController Delegate
+//---------------------------------------------------------------------------------------
+- (void)revealController:(SWRevealViewController *)revealController willMoveToPosition:(FrontViewPosition)position {
+    NSLog( @"%@: %@", NSStringFromSelector(_cmd), [self stringFromFrontViewPosition:position]);
+}
+
+- (void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position {
+    NSLog( @"%@: %@", NSStringFromSelector(_cmd), [self stringFromFrontViewPosition:position]);
+}
+
+- (void)revealController:(SWRevealViewController *)revealController animateToPosition:(FrontViewPosition)position {
+    NSLog( @"%@: %@", NSStringFromSelector(_cmd), [self stringFromFrontViewPosition:position]);
+}
+
+- (void)revealControllerPanGestureBegan:(SWRevealViewController *)revealController {
+    NSLog( @"%@", NSStringFromSelector(_cmd) );
+}
+
+- (void)revealControllerPanGestureEnded:(SWRevealViewController *)revealController {
+    NSLog( @"%@", NSStringFromSelector(_cmd) );
+}
+
+- (void)revealController:(SWRevealViewController *)revealController panGestureBeganFromLocation:(CGFloat)location progress:(CGFloat)progress {
+    NSLog( @"%@: %f, %f", NSStringFromSelector(_cmd), location, progress);
+}
+
+- (void)revealController:(SWRevealViewController *)revealController panGestureMovedToLocation:(CGFloat)location progress:(CGFloat)progress {
+    NSLog( @"%@: %f, %f", NSStringFromSelector(_cmd), location, progress);
+}
+
+- (void)revealController:(SWRevealViewController *)revealController panGestureEndedToLocation:(CGFloat)location progress:(CGFloat)progress {
+    NSLog( @"%@: %f, %f", NSStringFromSelector(_cmd), location, progress);
+}
+
+
+
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+#pragma mark - PRIVATE
+//---------------------------------------------------------------------------------------
+- (NSString *)stringFromFrontViewPosition:(FrontViewPosition)position
+{
+    NSString *str = nil;
+    
+    if ( position == FrontViewPositionLeftSideMostRemoved ) str = @"FrontViewPositionLeftSideMostRemoved";
+    if ( position == FrontViewPositionLeftSideMost) str = @"FrontViewPositionLeftSideMost";
+    if ( position == FrontViewPositionLeftSide) str = @"FrontViewPositionLeftSide";
+    if ( position == FrontViewPositionLeft ) str = @"FrontViewPositionLeft";
+    if ( position == FrontViewPositionRight ) str = @"FrontViewPositionRight";
+    if ( position == FrontViewPositionRightMost ) str = @"FrontViewPositionRightMost";
+    if ( position == FrontViewPositionRightMostRemoved ) str = @"FrontViewPositionRightMostRemoved";
+    
+    return str;
+}
+*/
+
 
 @end
