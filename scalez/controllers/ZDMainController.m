@@ -153,7 +153,7 @@
 //---------------------------------------------------------------------------------------
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
 
-    return 1;
+    return 3;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -183,11 +183,26 @@
     //cell.imageView.image = truckImage;
     
     UILabel *label = [[UILabel alloc] init];
+    [label setTintColor:[UIColor redColor]];
     [label setText:@"asdfadsf"];
     
-    [[cell contentView] addSubview:label];
+    //[[cell contentView] addSubview:label];
+    //[cell addSubview:label];
     
+    UIView *bgView = [[UIView alloc] initWithFrame:cell.backgroundView.frame];
+    bgView.backgroundColor = [UIColor blueColor];
+    bgView.layer.borderColor = [[UIColor yellowColor] CGColor];
+    bgView.layer.borderWidth = 4;
+    //cell.selectedBackgroundView = bgView;
+    cell.BackgroundView = bgView;
     
+    //UIView
+    
+    UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, cell.bounds.size.width, 50)];
+    title.tag = 200;
+    title.text = @"Tone";
+    [title setTintColor:[UIColor redColor]];
+    [cell.contentView addSubview:title];
     
     return cell;
 }
