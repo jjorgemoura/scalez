@@ -35,10 +35,11 @@
 		CF2476EA1945FC72005387FC /* Storyboard_ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2476E91945FC72005387FC /* Storyboard_ipad.storyboard */; };
 		CF2476ED194610C3005387FC /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2476EB194610C3005387FC /* reveal-icon.png */; };
 		CF2476EE194610C3005387FC /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2476EC194610C3005387FC /* reveal-icon@2x.png */; };
-		CF59325D194B601F0013FFDF /* ZDScaleMainViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59325C194B601F0013FFDF /* ZDScaleMainViewLayout.m */; };
 		CF694E831940C6A90069A55D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF694E821940C6A90069A55D /* Settings.bundle */; };
 		CF7396E719475E3400E5E4C4 /* 12-eye.png in Resources */ = {isa = PBXBuildFile; fileRef = CF7396E519475E3400E5E4C4 /* 12-eye.png */; };
 		CF7396E819475E3400E5E4C4 /* 13-target.png in Resources */ = {isa = PBXBuildFile; fileRef = CF7396E619475E3400E5E4C4 /* 13-target.png */; };
+		CFB2ACF0194E26AA00A19A56 /* ZDScaleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB2ACEF194E26AA00A19A56 /* ZDScaleCollectionViewCell.m */; };
+		CFB2ACF3194E26D300A19A56 /* ZDScaleCollectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB2ACF2194E26D300A19A56 /* ZDScaleCollectionHeadView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,11 +101,13 @@
 		CF2476E91945FC72005387FC /* Storyboard_ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_ipad.storyboard; sourceTree = "<group>"; };
 		CF2476EB194610C3005387FC /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
 		CF2476EC194610C3005387FC /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
-		CF59325B194B601F0013FFDF /* ZDScaleMainViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDScaleMainViewLayout.h; sourceTree = "<group>"; };
-		CF59325C194B601F0013FFDF /* ZDScaleMainViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDScaleMainViewLayout.m; sourceTree = "<group>"; };
 		CF694E821940C6A90069A55D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CF7396E519475E3400E5E4C4 /* 12-eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12-eye.png"; sourceTree = "<group>"; };
 		CF7396E619475E3400E5E4C4 /* 13-target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "13-target.png"; sourceTree = "<group>"; };
+		CFB2ACEE194E26AA00A19A56 /* ZDScaleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDScaleCollectionViewCell.h; sourceTree = "<group>"; };
+		CFB2ACEF194E26AA00A19A56 /* ZDScaleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDScaleCollectionViewCell.m; sourceTree = "<group>"; };
+		CFB2ACF1194E26D300A19A56 /* ZDScaleCollectionHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDScaleCollectionHeadView.h; sourceTree = "<group>"; };
+		CFB2ACF2194E26D300A19A56 /* ZDScaleCollectionHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDScaleCollectionHeadView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,8 +236,10 @@
 			children = (
 				CF2476E71945FC61005387FC /* Storyboard_iphone.storyboard */,
 				CF2476E91945FC72005387FC /* Storyboard_ipad.storyboard */,
-				CF59325B194B601F0013FFDF /* ZDScaleMainViewLayout.h */,
-				CF59325C194B601F0013FFDF /* ZDScaleMainViewLayout.m */,
+				CFB2ACF1194E26D300A19A56 /* ZDScaleCollectionHeadView.h */,
+				CFB2ACF2194E26D300A19A56 /* ZDScaleCollectionHeadView.m */,
+				CFB2ACEE194E26AA00A19A56 /* ZDScaleCollectionViewCell.h */,
+				CFB2ACEF194E26AA00A19A56 /* ZDScaleCollectionViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -417,11 +422,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB2ACF0194E26AA00A19A56 /* ZDScaleCollectionViewCell.m in Sources */,
 				CF2476E11945FB44005387FC /* SWRevealViewController.m in Sources */,
 				CF2476CE1945FB00005387FC /* ZDScaleType.m in Sources */,
-				CF59325D194B601F0013FFDF /* ZDScaleMainViewLayout.m in Sources */,
 				CF2476DA1945FB2E005387FC /* ZDChordViewerController.m in Sources */,
 				CF2476CF1945FB00005387FC /* ZDTetrad.m in Sources */,
+				CFB2ACF3194E26D300A19A56 /* ZDScaleCollectionHeadView.m in Sources */,
 				CF2476CA1945FB00005387FC /* ZDChord.m in Sources */,
 				CF2476DC1945FB2E005387FC /* ZDMenuController.m in Sources */,
 				CF2476DD1945FB2E005387FC /* ZDScaleSelectorController.m in Sources */,
