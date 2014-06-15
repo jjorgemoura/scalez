@@ -10,6 +10,8 @@
 #import "ZDScale.h"
 #import "ZDNote.h"
 #import "ZDScaleType.h"
+#import "ZDScaleCollectionHeadView.h"
+#import "ZDScaleCollectionViewCell.h"
 
 @interface ZDMainController ()
 
@@ -145,6 +147,30 @@
 //---------------------------------------------------------------------------------------
 
 
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+#pragma mark - UICollectionViewDelegateFlowLayout Delegate
+//---------------------------------------------------------------------------------------
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+//
+//    CGSize sectionHeader = CGSizeMake(10, 10);
+//    
+//    return sectionHeader;
+//}
+//
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+//
+//    CGSize theCell = CGSizeMake(90, 90);
+//    
+//    return theCell;
+//}
+//
+//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+//
+//    UIEdgeInsets theEdges = UIEdgeInsetsMake(0.0, 25.0, 20.0, 15.0);
+//    
+//    return theEdges;
+//}
 
 
 //---------------------------------------------------------------------------------------
@@ -160,49 +186,80 @@
 
     NSInteger result = 1;
     
-    if ([self theScale]) {
+    if (section == 0) {
+
+        if ([self theScale]) {
+            
+            result = [[[self theScale] scaleNotes] count];
+        }
+    }
+    
+    if(section == 1) {
+    
+        result = 5;
+    }
+
+    if(section == 2) {
         
-        result = [[[self theScale] scaleNotes] count];
+        result = 12;
     }
     
     return result;
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"MY_MAINCOLLECTION_HEADER";
+    
+    ZDScaleCollectionHeadView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    [headerView header:@"awefasdf"];
+
+    return headerView;
+}
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    NSLog(@"Collection view indexpath: %i", [indexPath row]);
+    //NSLog(@"Collection view indexpath: %i", [indexPath row]);
     
     static NSString *cellIdentifier = @"MY_MAINCOLLECTION_CELL";
 
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    ZDScaleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    //[cell mainText:[[[self theScale] scaleNotes] objectAtIndex:indexPath.row]];
+    
+    [cell mainText:@"Em"];
+    
     
     //cell.imageView.image = [UIImage imageNamed:self.truckImages[0]];
     //UIImage *truckImage = [[UIImage alloc] init];
     //truckImage = [UIImage imageNamed:[self.truckImages objectAtIndex:indexPath.row]];
     //cell.imageView.image = truckImage;
     
-    UILabel *label = [[UILabel alloc] init];
-    [label setTintColor:[UIColor redColor]];
-    [label setText:@"asdfadsf"];
+    //mais ao menos
+//    UILabel *label = [[UILabel alloc] init];
+//    [label setTintColor:[UIColor redColor]];
+//    [label setText:@"asdfadsf"];
     
     //[[cell contentView] addSubview:label];
     //[cell addSubview:label];
     
-    UIView *bgView = [[UIView alloc] initWithFrame:cell.backgroundView.frame];
-    bgView.backgroundColor = [UIColor blueColor];
-    bgView.layer.borderColor = [[UIColor yellowColor] CGColor];
-    bgView.layer.borderWidth = 4;
-    //cell.selectedBackgroundView = bgView;
-    cell.BackgroundView = bgView;
+    //mais ao menos
+//    UIView *bgView = [[UIView alloc] initWithFrame:cell.backgroundView.frame];
+//    bgView.backgroundColor = [UIColor blueColor];
+//    bgView.layer.borderColor = [[UIColor yellowColor] CGColor];
+//    bgView.layer.borderWidth = 4;
+//    //cell.selectedBackgroundView = bgView;
+//    cell.BackgroundView = bgView;
     
     //UIView
-    
-    UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, cell.bounds.size.width, 50)];
-    title.tag = 200;
-    title.text = @"Tone";
-    [title setTintColor:[UIColor redColor]];
-    [cell.contentView addSubview:title];
+    //mais ao menos
+//    UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, cell.bounds.size.width, 50)];
+//    title.tag = 200;
+//    title.text = @"Tone";
+//    [title setTintColor:[UIColor redColor]];
+//    [cell.contentView addSubview:title];
     
     return cell;
 }
