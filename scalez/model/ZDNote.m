@@ -66,60 +66,70 @@
     if (self) {
         
         _note = note;
+        _musicNote = note;
+        _noteText = [self noteToText:[self note]];
     }
     return self;
-
 }
 
-- (NSString *)description
+
+- (NSString *)description {
+    
+    NSString *result = [self noteToText:[self note]];
+    
+    return result;
+}
+
+
+- (NSString *)noteToText:(NSInteger)theNote
 {
     NSString *description = nil;
     
-    if([self note] == C) {
+    if(theNote == C) {
         description = @"C";
     }
 
-    if([self note] == CSharp) {
+    if(theNote == CSharp) {
         description = @"C#/Db";
     }
     
-    if([self note] == D) {
+    if(theNote == D) {
         description = @"D";
     }
     
-    if([self note] == DSharp) {
+    if(theNote == DSharp) {
         description = @"D#/Eb";
     }
     
-    if([self note] == E) {
+    if(theNote == E) {
         description = @"E";
     }
     
-    if([self note] == F) {
+    if(theNote == F) {
         description = @"F";
     }
     
-    if([self note] == FSharp) {
+    if(theNote == FSharp) {
         description = @"F#/Gb";
     }
     
-    if([self note] == G) {
+    if(theNote == G) {
         description = @"G";
     }
     
-    if([self note] == GSharp) {
+    if(theNote == GSharp) {
         description = @"G#/Ab";
     }
     
-    if([self note] == A) {
+    if(theNote == A) {
         description = @"A";
     }
     
-    if([self note] == ASharp) {
+    if(theNote == ASharp) {
         description = @"A#/Bb";
     }
     
-    if([self note] == B) {
+    if(theNote == B) {
         description = @"B";
     }
     

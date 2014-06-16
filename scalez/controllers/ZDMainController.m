@@ -63,6 +63,13 @@
     [[self revealButtonItem] setTarget: [self revealViewController]];
     [[self revealButtonItem] setAction: @selector( revealToggle: )];
     [[[self navigationController] navigationBar] addGestureRecognizer: [[self revealViewController] panGestureRecognizer]];
+    
+    
+    NSString *theTitle = [[[self theScale] zdNote] description];
+    theTitle = [theTitle stringByAppendingString:@" "];
+    theTitle = [theTitle stringByAppendingString:[[[self theScale] zdScaleType] type]];
+    
+    [self setTitle:theTitle];
 }
 
 - (void)didReceiveMemoryWarning
@@ -213,8 +220,19 @@
     
     ZDScaleCollectionHeadView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    [headerView header:@"awefasdf"];
 
+    if ([indexPath section] == 0) {
+        [headerView header:@"Scale Notes"];
+    }
+    
+    if ([indexPath section] == 1) {
+        [headerView header:@"Chords"];
+    }
+    
+    if ([indexPath section] == 2) {
+        [headerView header:@"Tetrad Chords"];
+    }
+    
     return headerView;
 }
 
@@ -227,9 +245,21 @@
     
     ZDScaleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    //[cell mainText:[[[self theScale] scaleNotes] objectAtIndex:indexPath.row]];
+    if ([indexPath section] == 0) {
+
+        NSString *theScaleNote = (NSString *)[[[[self theScale] scaleNotes] objectAtIndex:[indexPath row]] description];
+        [cell mainText:theScaleNote];
+    }
+
+    if ([indexPath section] == 1) {
+        
+        [cell mainText:@"Em"];
+    }
     
-    [cell mainText:@"Em"];
+    if ([indexPath section] == 2) {
+        
+        [cell mainText:@"Bm"];
+    }
     
     
     //cell.imageView.image = [UIImage imageNamed:self.truckImages[0]];

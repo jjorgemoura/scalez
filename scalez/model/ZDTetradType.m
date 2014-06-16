@@ -15,7 +15,34 @@
 #pragma mark - Class Methods
 + (NSArray *)list {
     
-    return nil;
+    NSDictionary *si1 = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:4], [NSNumber numberWithInt:1],
+                         [NSNumber numberWithInt:3], [NSNumber numberWithInt:2],
+                         [NSNumber numberWithInt:4], [NSNumber numberWithInt:3],
+                         [NSNumber numberWithInt:1], [NSNumber numberWithInt:4],
+                         nil];
+    
+    NSDictionary *si2 = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:3], [NSNumber numberWithInt:1],
+                         [NSNumber numberWithInt:4], [NSNumber numberWithInt:2],
+                         [NSNumber numberWithInt:3], [NSNumber numberWithInt:3],
+                         [NSNumber numberWithInt:2], [NSNumber numberWithInt:4],
+                         nil];
+    
+    NSDictionary *si3 = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:4], [NSNumber numberWithInt:1],
+                         [NSNumber numberWithInt:3], [NSNumber numberWithInt:2],
+                         [NSNumber numberWithInt:3], [NSNumber numberWithInt:3],
+                         [NSNumber numberWithInt:2], [NSNumber numberWithInt:4],
+                         nil];
+    
+  
+    
+    ZDTetradType *st1 = [[ZDTetradType alloc] initWithID:[NSNumber numberWithInt:1] type:@"SevenMajor" andIntervals:si1];
+    ZDTetradType *st2 = [[ZDTetradType alloc] initWithID:[NSNumber numberWithInt:2] type:@"SevenMinor" andIntervals:si2];
+    ZDTetradType *st3 = [[ZDTetradType alloc] initWithID:[NSNumber numberWithInt:3] type:@"Seven" andIntervals:si3];
+    
+    
+    NSArray *theArray = [[NSArray alloc] initWithObjects:st1, st2, st3, nil];
+    
+    return theArray;
 }
 
 + (NSDictionary *)bigList {
