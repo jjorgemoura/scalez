@@ -10,6 +10,10 @@
 
 #import "ZDNote.h"
 #import "ZDScaleType.h"
+#import "ZDChord.h"
+#import "ZDTetrad.h"
+#import "ZDChordType.h"
+#import "ZDTetradType.h"
 
 
 @implementation ZDScale
@@ -53,9 +57,59 @@
     
     
     //generate chords
+    ZDChord *theChord = nil;
+    
+    for (int j = 1; j <= [_notes count] ; j++) {
+        
+        int rootDegree = j;
+        int thirdDegree = j + 2;
+        int fifthDegree = j + 4;
+        
+        if (thirdDegree > [_notes count]) {
+            thirdDegree = thirdDegree - [_notes count];
+        }
+        
+        if (fifthDegree > [_notes count]) {
+            fifthDegree = fifthDegree - [_notes count];
+        }
+        
+        
+        theChord = [[ZDChord alloc] initWithRootNote:[_notes objectForKey:[NSNumber numberWithInt:rootDegree]] thirdNote:[_notes objectForKey:[NSNumber numberWithInt:thirdDegree]] andFifthNote:[_notes objectForKey:[NSNumber numberWithInt:fifthDegree]]];
+        
+        [_chords setObject:theChord forKey:[NSNumber numberWithInt:j]];
+    }
     
     
     
+    
+    //generate tetrad chords
+    ZDTetrad *theTetradChord = nil;
+    
+    for (int j = 1; j <= [_notes count] ; j++) {
+        
+        int rootDegree = j;
+        int thirdDegree = j + 2;
+        int fifthDegree = j + 4;
+        int seventhDegree = j + 6;
+        
+        if (thirdDegree > [_notes count]) {
+            thirdDegree = thirdDegree - [_notes count];
+        }
+        
+        if (fifthDegree > [_notes count]) {
+            fifthDegree = fifthDegree - [_notes count];
+        }
+        
+        if (seventhDegree > [_notes count]) {
+            seventhDegree = seventhDegree - [_notes count];
+        }
+        
+        
+        theTetradChord = [[ZDTetrad alloc] initWithRootNote:[_notes objectForKey:[NSNumber numberWithInt:rootDegree]] thirdNote:[_notes objectForKey:[NSNumber numberWithInt:thirdDegree]] fifthNote:[_notes objectForKey:[NSNumber numberWithInt:fifthDegree]] andSeventhNote:[_notes objectForKey:[NSNumber numberWithInt:seventhDegree]]];
+        
+        
+        [_tetrads setObject:theTetradChord forKey:[NSNumber numberWithInt:j]];
+    }
     
     
     

@@ -66,7 +66,32 @@
 
 + (ZDChordType *)buildWithNote:(ZDMusicNote)a note:(ZDMusicNote)b andNote:(ZDMusicNote)c {
     
-    return nil;
+    ZDChordType *result = nil;
+    
+    
+    for (ZDChordType *x in [ZDChordType list]) {
+        
+        NSNumber *firstInterval = [[x intervals] objectForKey:[NSNumber numberWithInt:1]];
+        NSNumber *secondInterval = [[x intervals] objectForKey:[NSNumber numberWithInt:2]];
+        NSNumber *endInterval = [[x intervals] objectForKey:[NSNumber numberWithInt:3]];
+        
+
+        
+        int firstToAnalyse = b - a;
+        int secondToAnalyse = c - b;
+        
+        
+        
+        if ([firstInterval integerValue] == firstToAnalyse) {
+            if ([secondInterval integerValue] == secondToAnalyse) {
+                result = x;
+            }
+        }
+    }
+    
+    
+    
+    return result;
 }
 
 

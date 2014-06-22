@@ -7,6 +7,7 @@
 //
 
 #import "ZDChord.h"
+#import "ZDChordType.h"
 
 @implementation ZDChord
 
@@ -22,6 +23,17 @@
 //---------------------------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------
 #pragma mark - Contructor Methods
+- (instancetype)initWithRootNote:(ZDNote *)root thirdNote:(ZDNote *)third andFifthNote:(ZDNote *)fifth {
+
+    self = [super init];
+    if (self) {
+        _rootNote = root;
+        _thirdNote = third;
+        _fifthNote = fifth;
+    }
+    return self;
+}
+
 
 
 
@@ -36,7 +48,15 @@
 //---------------------------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------
 #pragma mark - Public Methods
+- (void)processChord {
 
+    ZDChordType *theType = [ZDChordType buildWithNote:[[self rootNote] musicNote] note:[[self thirdNote] musicNote] andNote:[[self fifthNote] musicNote]];
+    
+    if(theType) {
+    
+        _chordType = theType;
+    }
+}
 
 
 

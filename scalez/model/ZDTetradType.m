@@ -52,7 +52,17 @@
 
 + (ZDTetradType *)buildWithNote:(ZDMusicNote)a note:(ZDMusicNote)b note:(ZDMusicNote)c andNote:(ZDMusicNote)d {
     
-    return nil;
+    ZDTetradType *result = nil;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    return result;
 }
 
 

@@ -8,9 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class ZDChordType;
+@class ZDNote;
+
+
 @interface ZDChord : NSObject
 
+@property (nonatomic, strong, readonly) ZDNote *rootNote;
+@property (nonatomic, strong, readonly) ZDNote *thirdNote;
+@property (nonatomic, strong, readonly) ZDNote *fifthNote;
+@property (nonatomic, strong, readonly) ZDChordType *chordType;
 
+- (instancetype)initWithRootNote:(ZDNote *)root thirdNote:(ZDNote *)third andFifthNote:(ZDNote *)fifth;
 
+- (void)processChord;
 
 @end
