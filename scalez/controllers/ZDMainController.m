@@ -12,6 +12,8 @@
 #import "ZDScaleType.h"
 #import "ZDScaleCollectionHeadView.h"
 #import "ZDScaleCollectionViewCell.h"
+#import "ZDChord.h"
+#import "ZDTetrad.h"
 
 @interface ZDMainController ()
 
@@ -19,6 +21,7 @@
 
 @property (nonatomic, weak) IBOutlet UIBarButtonItem* revealButtonItem;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem* changeScaleButtonItem;
+
 
 @end
 
@@ -69,6 +72,9 @@
     theTitle = [theTitle stringByAppendingString:@" "];
     theTitle = [theTitle stringByAppendingString:[[[self theScale] zdScaleType] type]];
     
+    
+    
+    //
     [self setTitle:theTitle];
 }
 
@@ -203,12 +209,18 @@
     
     if(section == 1) {
     
-        result = 5;
+        if ([self theScale]) {
+            
+            result = [[[self theScale] scaleChords] count];
+        }
     }
 
     if(section == 2) {
         
-        result = 12;
+        if ([self theScale]) {
+            
+            result = [[[self theScale] scaleTetrads] count];
+        }
     }
     
     return result;
@@ -253,12 +265,14 @@
 
     if ([indexPath section] == 1) {
         
-        [cell mainText:@"Em"];
+        NSString *theChord = [(ZDChord *)[[[self theScale] scaleChords] objectAtIndex:[indexPath row]] toString];
+        [cell mainText:theChord];
     }
     
     if ([indexPath section] == 2) {
         
-        [cell mainText:@"Bm"];
+        NSString *theChord = [(ZDTetrad *)[[[self theScale] scaleTetrads] objectAtIndex:[indexPath row]] toString];
+        [cell mainText:theChord];
     }
     
     
@@ -296,7 +310,10 @@
 
 
 
-
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+#pragma mark - Private Methods
+//---------------------------------------------------------------------------------------
 
 
 @end

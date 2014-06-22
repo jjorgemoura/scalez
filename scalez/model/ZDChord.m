@@ -58,7 +58,14 @@
     }
 }
 
-
+- (NSString *)toString {
+    
+    NSString *result;
+    
+    result = [[[self rootNote] description] stringByAppendingString:[[self chordType] chordType]];
+    
+    return result;
+}
 
 
 //---------------------------------------------------------------------------------------------------------

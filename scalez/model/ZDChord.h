@@ -22,5 +22,5 @@
 - (instancetype)initWithRootNote:(ZDNote *)root thirdNote:(ZDNote *)third andFifthNote:(ZDNote *)fifth;
 
 - (void)processChord;
-
+- (NSString *)toString;
 @end

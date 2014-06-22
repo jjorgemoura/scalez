@@ -62,7 +62,14 @@
     }
 }
 
+- (NSString *)toString {
 
+    NSString *result;
+    
+    result = [[[self rootNote] description] stringByAppendingString:[[self tetradType] chordType]];
+    
+    return result;
+}
 
 
 //---------------------------------------------------------------------------------------------------------
