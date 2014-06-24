@@ -14,9 +14,9 @@
 
 @interface ZDScale : NSObject {
 
-    NSMutableDictionary *_notes;
-    NSMutableDictionary *_chords;
-    NSMutableDictionary *_tetrads;
+    NSMutableArray *_notes;
+    NSMutableArray *_chords;
+    NSMutableArray *_tetrads;
 }
 
 

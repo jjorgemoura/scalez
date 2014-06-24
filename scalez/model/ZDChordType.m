@@ -41,19 +41,8 @@
     ZDChordType *st2 = [[ZDChordType alloc] initWithID:[NSNumber numberWithInt:2] type:@"Minor" andIntervals:si2];
     ZDChordType *st3 = [[ZDChordType alloc] initWithID:[NSNumber numberWithInt:3] type:@"Augmented" andIntervals:si3];
     ZDChordType *st4 = [[ZDChordType alloc] initWithID:[NSNumber numberWithInt:4] type:@"Diminiush" andIntervals:si4];
-//    ZDScaleType *st5 = [[ZDScaleType alloc] initWithID:[NSNumber numberWithInt:5] type:@"SevenDominant" andIntervals:si5];
-//    ZDScaleType *st6 = [[ZDScaleType alloc] initWithID:[NSNumber numberWithInt:6] type:@"Whole-Tone Scale" andIntervals:si6];
-//    ZDScaleType *st7 = [[ZDScaleType alloc] initWithID:[NSNumber numberWithInt:7] type:@"Dorian" andIntervals:si7];
-//    ZDScaleType *st8 = [[ZDScaleType alloc] initWithID:[NSNumber numberWithInt:8] type:@"Phrygian" andIntervals:si8];
-//    ZDScaleType *st9 = [[ZDScaleType alloc] initWithID:[NSNumber numberWithInt:9] type:@"Lydian" andIntervals:si9];
-//    ZDScaleType *st10 = [[ZDScaleType alloc] initWithID:[NSNumber numberWithInt:10] type:@"Mixolydian" andIntervals:si10];
-//    ZDScaleType *st11 = [[ZDScaleType alloc] initWithID:[NSNumber numberWithInt:11] type:@"Aeolian" andIntervals:si11];
-//    ZDScaleType *st12 = [[ZDScaleType alloc] initWithID:[NSNumber numberWithInt:12] type:@"Locrian" andIntervals:si12];
     
     
-    
-    
-    //NSArray *theArray = [[NSArray alloc] initWithObjects:st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12, nil];
     NSArray *theArray = [[NSArray alloc] initWithObjects:st1, st2, st3, st4, nil];
     
     return theArray;
@@ -67,6 +56,13 @@
 + (ZDChordType *)buildWithNote:(ZDMusicNote)a note:(ZDMusicNote)b andNote:(ZDMusicNote)c {
     
     ZDChordType *result = nil;
+    //NSLog(@"Chord Type for %i, %i, %i", a, b, c);
+    
+    
+    
+    int firstToAnalyse = (b > a) ? b - a : b + 12 - a;
+    int secondToAnalyse = (c > b) ? c - b : c + 12 - b;
+    int thirdToAnalyse = (a > c) ? a - c : a + 12 - c;
     
     
     for (ZDChordType *x in [ZDChordType list]) {
@@ -75,16 +71,13 @@
         NSNumber *secondInterval = [[x intervals] objectForKey:[NSNumber numberWithInt:2]];
         NSNumber *endInterval = [[x intervals] objectForKey:[NSNumber numberWithInt:3]];
         
-
-        
-        int firstToAnalyse = b - a;
-        int secondToAnalyse = c - b;
-        
-        
         
         if ([firstInterval integerValue] == firstToAnalyse) {
             if ([secondInterval integerValue] == secondToAnalyse) {
-                result = x;
+                if ([endInterval integerValue] == thirdToAnalyse) {
+                    result = x;
+                    break;
+                }
             }
         }
     }

@@ -66,6 +66,10 @@
 
     NSString *result;
     
+    if(![self tetradType]) {
+        [self processChord];
+    }
+    
     result = [[[self rootNote] description] stringByAppendingString:[[self tetradType] chordType]];
     
     return result;

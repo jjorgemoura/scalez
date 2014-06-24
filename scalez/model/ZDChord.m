@@ -62,6 +62,10 @@
     
     NSString *result;
     
+    if(![self chordType]) {
+        [self processChord];
+    }
+    
     result = [[[self rootNote] description] stringByAppendingString:[[self chordType] chordType]];
     
     return result;
