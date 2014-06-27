@@ -15,6 +15,7 @@
 #import "ZDChord.h"
 #import "ZDTetrad.h"
 
+
 @interface ZDMainController ()
 
 @property (nonatomic, strong) ZDScale *theScale;
@@ -22,6 +23,7 @@
 @property (nonatomic, weak) IBOutlet UIBarButtonItem* revealButtonItem;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem* changeScaleButtonItem;
 
+@property (nonatomic, weak) IBOutlet UICollectionView *mainCollectionView;
 
 @end
 
@@ -68,15 +70,22 @@
     [[[self navigationController] navigationBar] addGestureRecognizer: [[self revealViewController] panGestureRecognizer]];
     
     
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+
+    [super viewWillAppear:animated];
+    
+    
+    //Title
     NSString *theTitle = [[[self theScale] zdNote] description];
     theTitle = [theTitle stringByAppendingString:@" "];
     theTitle = [theTitle stringByAppendingString:[[[self theScale] zdScaleType] type]];
     
-    
-    
-    //
     [self setTitle:theTitle];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -118,6 +127,15 @@
 		//UIViewController *xController = segue.destinationViewController;
 		//PlayerDetailsViewController *playerDetailsViewController = [[navigationController viewControllers] objectAtIndex:0];
 		//playerDetailsViewController.delegate = self;
+        
+        ZDScaleSelectorController *nextVC = [segue destinationViewController];
+        [nextVC setTheNote:[[self theScale] zdNote]];
+        [nextVC setTheScaleType:[[self theScale] zdScaleType]];
+        [nextVC setDelegate:self];
+        
+        
+        //UINavigationController *xxx = [segue destinationViewController];
+        //UIViewController *yyy = [xxx topViewController];
 	}
     
     
@@ -126,32 +144,25 @@
 
 - (IBAction)unwindToMainView:(UIStoryboardSegue *)unwindSegue {
     
-    UIViewController* sourceViewController = [unwindSegue sourceViewController];
+    UIViewController *sourceViewController = [unwindSegue sourceViewController];
     NSLog(@"Coming from %@", [sourceViewController description]);
     
-    /*
-     if ([sourceViewController isKindOfClass:[zD class]])
-     {
-     NSLog(@"Coming from BLUE!");
+    
+     if ([sourceViewController isKindOfClass:[ZDScaleSelectorController class]]) {
+        
+         ZDScaleSelectorController *theVC = (ZDScaleSelectorController *)sourceViewController;
+         
+         [[self theScale] setZdNote:[theVC theNote]];
+         [[self theScale] setZdScaleType:[theVC theScaleType]];
+         [[self theScale] processScale];
+         
+
+         dispatch_async(dispatch_get_main_queue(), ^{
+             [[self mainCollectionView] reloadData];
+         });
      }
-     */
-    
-    
 }
 
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 
 //---------------------------------------------------------------------------------------
@@ -223,6 +234,7 @@
         }
     }
     
+    NSLog(@"num cell %i for section %i", result, section);
     return result;
 }
 
@@ -308,6 +320,41 @@
     return cell;
 }
 
+
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+#pragma mark - ZDScaleSelectorControllerDelegate
+//---------------------------------------------------------------------------------------
+- (void)viewController:(ZDScaleSelectorController *)viewController didSelectZDnote:(ZDNote *)note andZDScalteType:(ZDScaleType *)scaleType {
+
+    
+    if (note && scaleType) {
+        
+        [[self theScale] setZdNote:note];
+        [[self theScale] setZdScaleType:scaleType];
+        [[self theScale] processScale];
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[self mainCollectionView] reloadData];
+        });
+    }
+    
+    
+    //close viewcontroller
+    //NSLog(@"The presented VC: %@", [[self presentedViewController] description]);
+//    UIViewController *xxx = [self presentedViewController];
+//    UIViewController *yyy = viewController;
+//    UINavigationController *zzz = [self navigationController];
+//    UIViewController *ttt = [viewController presentingViewController];
+//    UIViewController *ttt2 = [viewController presentedViewController];
+    
+    //[[self presentedViewController] dismissViewControllerAnimated:YES completion:nil];
+    //[self dismissViewControllerAnimated:YES completion: nil];
+    //[[self navigationController] dismissViewControllerAnimated:YES completion:nil];
+    [[self navigationController] popViewControllerAnimated:YES];
+    
+}
 
 
 //---------------------------------------------------------------------------------------

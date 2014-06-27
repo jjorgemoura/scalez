@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZDMainController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+#import "ZDScaleSelectorController.h"
+
+
+@interface ZDMainController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate, ZDScaleSelectorControllerDelegate>
 
 @end

@@ -30,19 +30,7 @@
     ZDNote *nt11 = [[ZDNote alloc] initWithNote:ASharp];
     ZDNote *nt12 = [[ZDNote alloc] initWithNote:B];
     
-    NSArray *theArray = [[NSArray alloc] initWithObjects:[nt1 description],
-                         [nt2 description],
-                         [nt3 description],
-                         [nt4 description],
-                         [nt5 description],
-                         [nt6 description],
-                         [nt7 description],
-                         [nt8 description],
-                         [nt9 description],
-                         [nt10 description],
-                         [nt11 description],
-                         [nt12 description],
-                         nil];
+    NSArray *theArray = [[NSArray alloc] initWithObjects:nt1, nt2, nt3, nt4, nt5, nt6, nt7, nt8, nt9, nt10, nt11, nt12, nil];
     
     return theArray;
 }
@@ -50,7 +38,20 @@
 
 + (ZDNote *)noteWithHalfSteps:(NSInteger)halfsteps fromNote:(ZDNote *)note {
 
-    ZDMusicNote x = [note note] + halfsteps;
+    NSInteger noteStep = 0;
+    
+    //test of octave
+    if ([note note] + halfsteps > 12) {
+        
+        noteStep = [note note] + halfsteps - 12;
+    }
+    else {
+        
+        noteStep = [note note] + halfsteps;
+    }
+    
+    
+    ZDMusicNote x = noteStep;
 
     ZDNote *returnNote = [[ZDNote alloc] initWithNote:x];
 

@@ -14,8 +14,8 @@
 
 @interface ZDScaleSelectorController ()
 
-@property (nonatomic, strong) ZDNote *note;
-@property (nonatomic, strong) ZDScaleType *scaleType;
+//@property (nonatomic, strong) ZDNote *note;
+//@property (nonatomic, strong) ZDScaleType *scaleType;
 
 @property (nonatomic, copy) NSArray *notesList;
 @property (nonatomic, copy) NSArray *scaleTypeList;
@@ -48,28 +48,22 @@
     [self setNotesList:[ZDNote list]];
     
     
-    //to remove
-    /*
-    [self setInitialNote:[[self notesList] objectAtIndex:5]];
-    ZDNote *ddddd = [[self notesList] objectAtIndex:5];
-    [ddddd note];
-    */
     
-    if([self initialNote]) {
+    if([self theNote]) {
         
         //NSString *aaaaa = [[self initialNote] description];
         //NSInteger inote = [[self initialNote] note];
 //        NSNumber *position2 = [NSNumber numberWithInt:[inote note]];
         
         
-        int position = 5;
+        int position = 3;
         
         [[self scaleTypePickerView] selectRow:position inComponent:0 animated:YES];
     }
     
-    if([self initialScaleType]) {
+    if([self theScaleType]) {
         
-        int position = [[[self initialScaleType] scaleID] intValue] - 1;
+        int position = [[[self theScaleType] scaleID] intValue] - 1;
         
         [[self scaleTypePickerView] selectRow:position inComponent:1 animated:YES];
     }
@@ -153,12 +147,17 @@
         
         if (component == 0) {
         
-            [self setNote:[[self notesList] objectAtIndex:row]];
+//            ZDNote *xxxx = [[self notesList] objectAtIndex:row];
+//            NSLog(@"%i", xxxx.note);
+//            NSLog(@"%@", xxxx.noteText);
+            
+            [self setTheNote:[[self notesList] objectAtIndex:row]];
         }
         
         if (component == 1) {
             
-            [self setScaleType:[[self scaleTypeList] objectAtIndex:row]];
+            //NSLog(@"%@", [[self scaleTypeList] objectAtIndex:row]);
+            [self setTheScaleType:[[self scaleTypeList] objectAtIndex:row]];
         }
     }
 }
@@ -170,7 +169,10 @@
 //---------------------------------------------------------------------------------------
 - (IBAction)okButtonPressed:(id)sender {
     
-    [[self navigationController] popViewControllerAnimated:YES];
+    //[[self navigationController] popViewControllerAnimated:YES];
+    
+    [[self delegate] viewController:self didSelectZDnote:[self theNote] andZDScalteType:[self theScaleType]];
+    
 }
 
 

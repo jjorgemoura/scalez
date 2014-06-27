@@ -10,8 +10,13 @@
 
 @implementation ZDChordType
 
+@synthesize chordType = _chordType;
 
+
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 #pragma mark - Class Methods
+//---------------------------------------------------------------------------------------
 + (NSArray *)list {
 
     NSDictionary *si1 = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:4], [NSNumber numberWithInt:1],
@@ -88,7 +93,10 @@
 }
 
 
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 #pragma mark - Constructor
+//---------------------------------------------------------------------------------------
 - (instancetype)initWithID:(NSNumber *)chordID type:(NSString *)type andIntervals:(NSDictionary *)intervals {
 
     self = [super init];
@@ -102,7 +110,10 @@
 
 
 
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 #pragma mark - Public Methods
+//---------------------------------------------------------------------------------------
 - (NSInteger)chordNotesQuantity {
 
     return 3;
@@ -110,6 +121,32 @@
 
 
 
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+#pragma mark - Getter
+//---------------------------------------------------------------------------------------
+- (NSString *)chordType {
 
+    NSString *result;
+    
+    
+    if([_chordType isEqualToString:@"Major"]) {
+        result = @"";
+    }
+    
+    if([_chordType isEqualToString:@"Minor"]) {
+        result = @"m";
+    }
+    
+    if([_chordType isEqualToString:@"Augmented"]) {
+        result = @"+";
+    }
+    
+    if([_chordType isEqualToString:@"Diminiush"]) {
+        result = @"dim";
+    }
+    
+    return result;
+}
 
 @end

@@ -142,7 +142,6 @@
                         <barButtonItem key="rightBarButtonItem" title="OK" id="loN-pb-VeI">
                             <connections>
                                 <action selector="okButtonPressed:" destination="NsI-Gx-P8C" id="rr2-WD-M2Z"/>
-                                <segue destination="4yT-XC-Vkf" kind="unwind" unwindAction="unwindToMainView:" id="f6V-hP-zdz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -151,9 +150,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWE-ku-W0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="4yT-XC-Vkf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2752" y="-1781"/>
+            <point key="canvasLocation" x="2760" y="-1757"/>
         </scene>
         <!--Main Controller-->
         <scene sceneID="afC-NV-1rZ">
@@ -224,6 +222,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="changeScaleButtonItem" destination="JSv-48-IbT" id="5FI-TW-thK"/>
+                        <outlet property="mainCollectionView" destination="JDz-Vf-osJ" id="02e-LX-GhY"/>
                         <outlet property="revealButtonItem" destination="gz8-WF-n3t" id="0am-SX-YR0"/>
                         <segue destination="NsI-Gx-P8C" kind="push" identifier="zd_scale_selector" id="9bG-sL-cb8"/>
                     </connections>

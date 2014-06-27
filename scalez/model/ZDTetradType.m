@@ -10,9 +10,12 @@
 
 @implementation ZDTetradType
 
+@synthesize chordType = _chordType;
 
-
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 #pragma mark - Class Methods
+//---------------------------------------------------------------------------------------
 + (NSArray *)list {
     
     NSDictionary *si1 = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:4], [NSNumber numberWithInt:1],
@@ -114,7 +117,10 @@
 }
 
 
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 #pragma mark - Constructor
+//---------------------------------------------------------------------------------------
 - (instancetype)initWithID:(NSNumber *)chordID type:(NSString *)type andIntervals:(NSDictionary *)intervals {
     
     self = [super init];
@@ -128,12 +134,54 @@
 
 
 
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 #pragma mark - Public Methods
+//---------------------------------------------------------------------------------------
 - (NSInteger)chordNotesQuantity {
     
     return 4;
 }
 
 
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+#pragma mark - Getter
+//---------------------------------------------------------------------------------------
+- (NSString *)chordType {
+    
+    NSString *result;
+    
 
+    
+    if([_chordType isEqualToString:@"MajorSeventh"]) {
+        result = @"maj7";
+    }
+    
+    if([_chordType isEqualToString:@"MinorSeventh"]) {
+        result = @"m7";
+    }
+    
+    if([_chordType isEqualToString:@"DominantSeventh"]) {
+        result = @"7";
+    }
+    
+    if([_chordType isEqualToString:@"HalfDiminishedSeventh"]) {
+        result = @"m7(b5)";
+    }
+    
+    if([_chordType isEqualToString:@"DiminishedSeventh"]) {
+        result = @"dim7";
+    }
+    
+    if([_chordType isEqualToString:@"MinorMajorSeventh"]) {
+        result = @"m/maj7";
+    }
+    
+    if([_chordType isEqualToString:@"AugmentedMajorSeventh"]) {
+        result = @"+maj7";
+    }
+    
+    return result;
+}
 @end

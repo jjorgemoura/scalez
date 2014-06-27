@@ -8,13 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
+@class ZDScaleSelectorController;
 @class ZDNote;
 @class ZDScaleType;
 
 
+
+@protocol ZDScaleSelectorControllerDelegate <NSObject>
+
+@optional
+- (void)viewController:(ZDScaleSelectorController *)viewController didSelectZDnote:(ZDNote *)note andZDScalteType:(ZDScaleType *)scaleType;
+
+@end
+
+
+
+
 @interface ZDScaleSelectorController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (nonatomic, strong) ZDNote *initialNote;
-@property (nonatomic, strong) ZDScaleType *initialScaleType;
+@property (nonatomic, weak) id <ZDScaleSelectorControllerDelegate> delegate;
+@property (nonatomic, strong) ZDNote *theNote;
+@property (nonatomic, strong) ZDScaleType *theScaleType;
 
 @end
