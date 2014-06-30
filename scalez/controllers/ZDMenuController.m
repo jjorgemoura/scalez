@@ -7,6 +7,8 @@
 //
 
 #import "ZDMenuController.h"
+#import "ZDSettingsController.h"
+#import "ZDAboutController.h"
 
 @interface ZDMenuController ()
 
@@ -67,7 +69,7 @@
     switch (indexPath.row)
     {
         case 0:
-            cellIdentifier = @"MY_MENUHEADER_CELL";
+            cellIdentifier = @"MY_MENUSCALE_CELL";
             break;
             
         case 1:
@@ -83,7 +85,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    [[cell textLabel] setText:@"toni"];
+    //[[cell textLabel] setText:@"toni"];
     
     return cell;
 }
@@ -127,7 +129,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -135,7 +137,43 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSLog(@"%@", [segue identifier]);
+    
+    
+    if ( [segue.destinationViewController isKindOfClass: [ZDSettingsController class]] && [sender isKindOfClass:[UITableViewCell class]] )
+    {
+        ZDSettingsController* cvc = segue.destinationViewController;
+        NSLog(@"%@", [cvc description]);
+    }
+    
+    if ( [segue.destinationViewController isKindOfClass: [ZDAboutController class]] && [sender isKindOfClass:[UITableViewCell class]] )
+    {
+        ZDAboutController* cvc = segue.destinationViewController;
+        NSLog(@"%@", [cvc description]);
+    }
+    
+    if([[segue identifier] isEqualToString:@"menu_main"]) {
+        UIViewController* cvc = segue.destinationViewController;
+        NSLog(@"%@", [cvc description]);
+    
+    }
+    
+    
+    
+    // configure the segue.
+    if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] )
+    {
+        SWRevealViewControllerSegue* rvcs = (SWRevealViewControllerSegue*) segue;
+        SWRevealViewController* rvc = [self revealViewController];
+
+        
+        rvcs.performBlock = ^(SWRevealViewControllerSegue* rvc_segue, UIViewController* svc, UIViewController* dvc)
+        {
+            UINavigationController* nc = [[UINavigationController alloc] initWithRootViewController:dvc];
+            [rvc pushFrontViewController:nc animated:YES];
+        };
+    }
 }
-*/
+
 
 @end

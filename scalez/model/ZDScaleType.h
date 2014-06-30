@@ -18,6 +18,7 @@
 
 
 + (NSArray *)list;
++ (ZDScaleType *)scaleFromType:(NSString *)type;
 + (NSDictionary *)bigList;
 
 

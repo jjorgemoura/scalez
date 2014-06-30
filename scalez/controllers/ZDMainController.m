@@ -58,10 +58,22 @@
     
     
     //Prepare Default Scale
-    [self setTheScale:[[ZDScale alloc] init]];
-    [[self theScale] setZdNote:[[ZDNote alloc] initWithNote:C]];
-    [[self theScale] setZdScaleType:[[ZDScaleType list] objectAtIndex:0]];
-    [[self theScale] processScale];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSNumber *rNote = [userDefaults objectForKey:@"rootNote"];
+    NSString *sType = [userDefaults objectForKey:@"scaleType"];
+    
+    if (rNote && sType) {
+        [self setTheScale:[[ZDScale alloc] init]];
+        [[self theScale] setZdNote:[[ZDNote alloc] initWithNote:[rNote intValue]]];
+        [[self theScale] setZdScaleType:[ZDScaleType scaleFromType:sType]];
+        [[self theScale] processScale];
+    }
+    else {
+        [self setTheScale:[[ZDScale alloc] init]];
+        [[self theScale] setZdNote:[[ZDNote alloc] initWithNote:C]];
+        [[self theScale] setZdScaleType:[[ZDScaleType list] objectAtIndex:0]];
+        [[self theScale] processScale];
+    }
     
     
     //
@@ -85,6 +97,23 @@
     
     [self setTitle:theTitle];
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+
+    NSLog(@"ViewWillDisappear");
+ 
+    
+    //Save to NSUserDefaults
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSNumber *rNote = [NSNumber numberWithInt:[[[self theScale] zdNote] note]];
+    NSString *sType = [[[self theScale] zdScaleType] type];
+    
+    [userDefaults setObject:rNote  forKey:@"rootNote"];
+    [userDefaults setObject:sType forKey:@"scaleType"];
+    [userDefaults synchronize];
+}
+
 
 
 - (void)didReceiveMemoryWarning
@@ -121,8 +150,8 @@
     
     if ([segue.identifier isEqualToString:@"zd_scale_selector"]) {
         
-        NSLog(@"Segue: %@", [segue description]);
-        NSLog(@"Sender: %@", [sender description]);
+        //NSLog(@"Segue: %@", [segue description]);
+        //NSLog(@"Sender: %@", [sender description]);
         
 		//UIViewController *xController = segue.destinationViewController;
 		//PlayerDetailsViewController *playerDetailsViewController = [[navigationController viewControllers] objectAtIndex:0];
@@ -143,6 +172,8 @@
 
 
 - (IBAction)unwindToMainView:(UIStoryboardSegue *)unwindSegue {
+    
+    //This code is not called
     
     UIViewController *sourceViewController = [unwindSegue sourceViewController];
     NSLog(@"Coming from %@", [sourceViewController description]);
@@ -222,7 +253,14 @@
     
         if ([self theScale]) {
             
-            result = [[[self theScale] scaleChords] count];
+            if ([[[self theScale] scaleNotes] count] != 7) {
+                result = 0;
+            }
+            else {
+            
+                result = [[[self theScale] scaleChords] count];
+            }
+
         }
     }
 
@@ -230,11 +268,17 @@
         
         if ([self theScale]) {
             
-            result = [[[self theScale] scaleTetrads] count];
+            if ([[[self theScale] scaleNotes] count] != 7) {
+                result = 0;
+            }
+            else {
+                
+                result = [[[self theScale] scaleTetrads] count];
+            }
         }
     }
     
-    NSLog(@"num cell %i for section %i", result, section);
+    //NSLog(@"num cell %i for section %i", result, section);
     return result;
 }
 
@@ -286,6 +330,12 @@
         NSString *theChord = [(ZDTetrad *)[[[self theScale] scaleTetrads] objectAtIndex:[indexPath row]] toString];
         [cell mainText:theChord];
     }
+    
+    
+    
+    //UI
+    
+    
     
     
     //cell.imageView.image = [UIImage imageNamed:self.truckImages[0]];

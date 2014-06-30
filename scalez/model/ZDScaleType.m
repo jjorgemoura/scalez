@@ -145,6 +145,24 @@
     return nil;
 }
 
++ (ZDScaleType *)scaleFromType:(NSString *)type {
+
+    ZDScaleType *result;
+    
+
+    for (ZDScaleType *x in [ZDScaleType list]) {
+        
+        if([[x type] isEqualToString:type]) {
+        
+            result = x;
+            break;
+        }
+    }
+    
+    
+    return result;
+}
+
 
 #pragma mark - Constructor
 - (instancetype)initWithID:(NSNumber *)scaleID type:(NSString *)type andIntervals:(NSDictionary *)intervals {

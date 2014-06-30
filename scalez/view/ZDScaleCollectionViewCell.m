@@ -23,18 +23,41 @@
     if (self) {
         // Initialization code
         [[self mainLabel] setText:@" "];
+        
+        [[self layer] setCornerRadius:25];
     }
     return self;
 }
 
-/*
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
+    [[self layer] setCornerRadius:45.0];
+    
+    //CGRect x = [[self layer] bounds];
+    //CGRect y = [self bounds];
+    
+    
+    
+    UIColor *bColor = [UIColor colorWithRed:0.557 green:0.557 blue:0.576 alpha:1];
+    //UIColor *bColor = [UIColor colorWithRed:1 green:0.584 blue:0 alpha:1];
+    
+    
+    [[self layer] setBorderColor:[bColor CGColor]];
+    [[self layer] setBorderWidth:3.0];
+    
+    
+    
+//    [[self layer] setShadowOffset:CGSizeMake(0, 5)];
+//    [[self layer] setShadowRadius:3.0];
+//    [[self layer] setShadowColor:[UIColor redColor].CGColor] ;
+//    [[self layer] setShadowOpacity:0.5];
+//    [[self layer] setShadowPath:[[UIBezierPath bezierPathWithRect:[self bounds]] CGPath]];
 }
-*/
+
 
 
 

@@ -51,12 +51,7 @@
     
     if([self theNote]) {
         
-        //NSString *aaaaa = [[self initialNote] description];
-        //NSInteger inote = [[self initialNote] note];
-//        NSNumber *position2 = [NSNumber numberWithInt:[inote note]];
-        
-        
-        int position = 3;
+        NSInteger position = [[self theNote] note] - 1;
         
         [[self scaleTypePickerView] selectRow:position inComponent:0 animated:YES];
     }

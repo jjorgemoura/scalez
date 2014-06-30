@@ -40,6 +40,8 @@
 		CF7396E819475E3400E5E4C4 /* 13-target.png in Resources */ = {isa = PBXBuildFile; fileRef = CF7396E619475E3400E5E4C4 /* 13-target.png */; };
 		CFB2ACF0194E26AA00A19A56 /* ZDScaleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB2ACEF194E26AA00A19A56 /* ZDScaleCollectionViewCell.m */; };
 		CFB2ACF3194E26D300A19A56 /* ZDScaleCollectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB2ACF2194E26D300A19A56 /* ZDScaleCollectionHeadView.m */; };
+		CFCDD649195D84B1007E3DA3 /* ZDSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDD648195D84B1007E3DA3 /* ZDSettingsController.m */; };
+		CFCDD64C195D84C0007E3DA3 /* ZDAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDD64B195D84C0007E3DA3 /* ZDAboutController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,10 @@
 		CFB2ACEF194E26AA00A19A56 /* ZDScaleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDScaleCollectionViewCell.m; sourceTree = "<group>"; };
 		CFB2ACF1194E26D300A19A56 /* ZDScaleCollectionHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDScaleCollectionHeadView.h; sourceTree = "<group>"; };
 		CFB2ACF2194E26D300A19A56 /* ZDScaleCollectionHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDScaleCollectionHeadView.m; sourceTree = "<group>"; };
+		CFCDD647195D84B1007E3DA3 /* ZDSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDSettingsController.h; sourceTree = "<group>"; };
+		CFCDD648195D84B1007E3DA3 /* ZDSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDSettingsController.m; sourceTree = "<group>"; };
+		CFCDD64A195D84C0007E3DA3 /* ZDAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDAboutController.h; sourceTree = "<group>"; };
+		CFCDD64B195D84C0007E3DA3 /* ZDAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDAboutController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +262,10 @@
 				CF2476D91945FB2E005387FC /* ZDScaleSelectorController.m */,
 				CF2476D21945FB2E005387FC /* ZDChordViewerController.h */,
 				CF2476D31945FB2E005387FC /* ZDChordViewerController.m */,
+				CFCDD647195D84B1007E3DA3 /* ZDSettingsController.h */,
+				CFCDD648195D84B1007E3DA3 /* ZDSettingsController.m */,
+				CFCDD64A195D84C0007E3DA3 /* ZDAboutController.h */,
+				CFCDD64B195D84C0007E3DA3 /* ZDAboutController.m */,
 			);
 			name = controller;
 			path = controllers;
@@ -423,7 +433,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFB2ACF0194E26AA00A19A56 /* ZDScaleCollectionViewCell.m in Sources */,
+				CFCDD64C195D84C0007E3DA3 /* ZDAboutController.m in Sources */,
 				CF2476E11945FB44005387FC /* SWRevealViewController.m in Sources */,
+				CFCDD649195D84B1007E3DA3 /* ZDSettingsController.m in Sources */,
 				CF2476CE1945FB00005387FC /* ZDScaleType.m in Sources */,
 				CF2476DA1945FB2E005387FC /* ZDChordViewerController.m in Sources */,
 				CF2476CF1945FB00005387FC /* ZDTetrad.m in Sources */,
@@ -501,7 +513,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 208;
+				CURRENT_PROJECT_VERSION = 257;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -541,7 +553,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 208;
+				CURRENT_PROJECT_VERSION = 257;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
