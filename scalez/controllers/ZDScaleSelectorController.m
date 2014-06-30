@@ -41,7 +41,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self setTitle:@"Choose ..."];
+    [self setTitle:@"Scale Selector"];
     
     
     [self setScaleTypeList:[ZDScaleType list]];

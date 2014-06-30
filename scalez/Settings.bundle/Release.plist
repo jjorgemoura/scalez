@@ -9,14 +9,10 @@
 		<dict>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
+			<key>Key</key>
+			<string>release_pkey</string>
 			<key>Title</key>
-			<string>Release Notes</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
-			<string>The Notes</string>
+			<string>For more information, please visit: www.jjorgemoura.com</string>
 		</dict>
 	</array>
 </dict>

@@ -100,7 +100,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
 
-    NSLog(@"ViewWillDisappear");
+    //NSLog(@"ViewWillDisappear");
  
     
     //Save to NSUserDefaults
@@ -130,7 +130,7 @@
 //---------------------------------------------------------------------------------------
 - (IBAction)openChangeScaleView:(id)sender {
     
-    NSLog(@"Sender: %@", [sender description]);
+    //NSLog(@"Sender: %@", [sender description]);
     
     [self performSegueWithIdentifier:@"zd_scale_selector" sender:self];
 }
@@ -176,7 +176,7 @@
     //This code is not called
     
     UIViewController *sourceViewController = [unwindSegue sourceViewController];
-    NSLog(@"Coming from %@", [sourceViewController description]);
+    //NSLog(@"Coming from %@", [sourceViewController description]);
     
     
      if ([sourceViewController isKindOfClass:[ZDScaleSelectorController class]]) {

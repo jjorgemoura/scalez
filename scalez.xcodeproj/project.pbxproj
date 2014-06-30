@@ -35,6 +35,7 @@
 		CF2476EA1945FC72005387FC /* Storyboard_ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2476E91945FC72005387FC /* Storyboard_ipad.storyboard */; };
 		CF2476ED194610C3005387FC /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2476EB194610C3005387FC /* reveal-icon.png */; };
 		CF2476EE194610C3005387FC /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2476EC194610C3005387FC /* reveal-icon@2x.png */; };
+		CF52C4661961B11F0017E40C /* ZDScaleCollectionShorterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF52C4651961B11F0017E40C /* ZDScaleCollectionShorterViewCell.m */; };
 		CF694E831940C6A90069A55D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF694E821940C6A90069A55D /* Settings.bundle */; };
 		CF7396E719475E3400E5E4C4 /* 12-eye.png in Resources */ = {isa = PBXBuildFile; fileRef = CF7396E519475E3400E5E4C4 /* 12-eye.png */; };
 		CF7396E819475E3400E5E4C4 /* 13-target.png in Resources */ = {isa = PBXBuildFile; fileRef = CF7396E619475E3400E5E4C4 /* 13-target.png */; };
@@ -103,6 +104,8 @@
 		CF2476E91945FC72005387FC /* Storyboard_ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_ipad.storyboard; sourceTree = "<group>"; };
 		CF2476EB194610C3005387FC /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
 		CF2476EC194610C3005387FC /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
+		CF52C4641961B11F0017E40C /* ZDScaleCollectionShorterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDScaleCollectionShorterViewCell.h; sourceTree = "<group>"; };
+		CF52C4651961B11F0017E40C /* ZDScaleCollectionShorterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDScaleCollectionShorterViewCell.m; sourceTree = "<group>"; };
 		CF694E821940C6A90069A55D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CF7396E519475E3400E5E4C4 /* 12-eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12-eye.png"; sourceTree = "<group>"; };
 		CF7396E619475E3400E5E4C4 /* 13-target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "13-target.png"; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				CFB2ACF2194E26D300A19A56 /* ZDScaleCollectionHeadView.m */,
 				CFB2ACEE194E26AA00A19A56 /* ZDScaleCollectionViewCell.h */,
 				CFB2ACEF194E26AA00A19A56 /* ZDScaleCollectionViewCell.m */,
+				CF52C4641961B11F0017E40C /* ZDScaleCollectionShorterViewCell.h */,
+				CF52C4651961B11F0017E40C /* ZDScaleCollectionShorterViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 				CF2476CA1945FB00005387FC /* ZDChord.m in Sources */,
 				CF2476DC1945FB2E005387FC /* ZDMenuController.m in Sources */,
 				CF2476DD1945FB2E005387FC /* ZDScaleSelectorController.m in Sources */,
+				CF52C4661961B11F0017E40C /* ZDScaleCollectionShorterViewCell.m in Sources */,
 				CF2476CD1945FB00005387FC /* ZDScale.m in Sources */,
 				CF2476CB1945FB00005387FC /* ZDChordType.m in Sources */,
 				CF2476DB1945FB2E005387FC /* ZDMainController.m in Sources */,
@@ -513,7 +519,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 257;
+				CURRENT_PROJECT_VERSION = 308;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -553,7 +559,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 257;
+				CURRENT_PROJECT_VERSION = 308;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -578,7 +584,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "scalez/scalez-Prefix.pch";
 				INFOPLIST_FILE = "scalez/scalez-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -594,7 +600,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "scalez/scalez-Prefix.pch";
 				INFOPLIST_FILE = "scalez/scalez-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

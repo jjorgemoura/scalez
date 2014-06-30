@@ -137,26 +137,25 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    NSLog(@"%@", [segue identifier]);
+    //NSLog(@"%@", [segue identifier]);
     
     
-    if ( [segue.destinationViewController isKindOfClass: [ZDSettingsController class]] && [sender isKindOfClass:[UITableViewCell class]] )
-    {
-        ZDSettingsController* cvc = segue.destinationViewController;
-        NSLog(@"%@", [cvc description]);
-    }
-    
-    if ( [segue.destinationViewController isKindOfClass: [ZDAboutController class]] && [sender isKindOfClass:[UITableViewCell class]] )
-    {
-        ZDAboutController* cvc = segue.destinationViewController;
-        NSLog(@"%@", [cvc description]);
-    }
-    
-    if([[segue identifier] isEqualToString:@"menu_main"]) {
-        UIViewController* cvc = segue.destinationViewController;
-        NSLog(@"%@", [cvc description]);
-    
-    }
+//    if ( [segue.destinationViewController isKindOfClass: [ZDSettingsController class]] && [sender isKindOfClass:[UITableViewCell class]] )
+//    {
+//        ZDSettingsController* cvc = segue.destinationViewController;
+//        //NSLog(@"%@", [cvc description]);
+//    }
+//    
+//    if ( [segue.destinationViewController isKindOfClass: [ZDAboutController class]] && [sender isKindOfClass:[UITableViewCell class]] )
+//    {
+//        ZDAboutController* cvc = segue.destinationViewController;
+//        //NSLog(@"%@", [cvc description]);
+//    }
+//    
+//    if([[segue identifier] isEqualToString:@"menu_main"]) {
+//        UIViewController* cvc = segue.destinationViewController;
+//        //NSLog(@"%@", [cvc description]);
+//    }
     
     
     

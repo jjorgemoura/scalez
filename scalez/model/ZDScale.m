@@ -133,7 +133,7 @@
     
     
 
-    NSLog(@"LOG1: %zu", (unsigned long)[_notes count]);
+    //NSLog(@"LOG1: %zu", (unsigned long)[_notes count]);
 }
 
 - (NSArray *)scaleNotes {
