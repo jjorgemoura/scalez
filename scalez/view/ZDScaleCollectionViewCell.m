@@ -17,6 +17,10 @@
 
 @implementation ZDScaleCollectionViewCell
 
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+#pragma mark - Constructor
+//---------------------------------------------------------------------------------------
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -30,6 +34,10 @@
 }
 
 
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+#pragma mark - Lifecycle Delegate
+//---------------------------------------------------------------------------------------
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect

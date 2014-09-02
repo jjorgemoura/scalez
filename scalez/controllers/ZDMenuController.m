@@ -16,6 +16,11 @@
 
 @implementation ZDMenuController
 
+
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+#pragma mark - Constructor
+//---------------------------------------------------------------------------------------
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -25,6 +30,10 @@
     return self;
 }
 
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+#pragma mark - Lifecycle
+//---------------------------------------------------------------------------------------
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -36,8 +45,6 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
-//    [[self navigationItem] setTitle:@"HELLO SCALEZ"];
-//    [[[self navigationController] navigationItem] setTitle:@"ScaleZ"];
     [self setTitle:@"Scalez"];
 }
 
@@ -47,8 +54,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 #pragma mark - Table view data source
-
+//---------------------------------------------------------------------------------------
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -84,8 +93,6 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
-    //[[cell textLabel] setText:@"toni"];
     
     return cell;
 }
@@ -130,7 +137,10 @@
 */
 
 
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 #pragma mark - Navigation
+//---------------------------------------------------------------------------------------
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

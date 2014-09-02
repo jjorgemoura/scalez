@@ -106,7 +106,7 @@
     //Save to NSUserDefaults
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
-    NSNumber *rNote = [NSNumber numberWithInt:[[[self theScale] zdNote] note]];
+    NSNumber *rNote = [NSNumber numberWithInteger:[[[self theScale] zdNote] note]];
     NSString *sType = [[[self theScale] zdScaleType] type];
     
     [userDefaults setObject:rNote  forKey:@"rootNote"];
@@ -332,41 +332,6 @@
     }
     
     
-    
-    //UI
-    
-    
-    
-    
-    //cell.imageView.image = [UIImage imageNamed:self.truckImages[0]];
-    //UIImage *truckImage = [[UIImage alloc] init];
-    //truckImage = [UIImage imageNamed:[self.truckImages objectAtIndex:indexPath.row]];
-    //cell.imageView.image = truckImage;
-    
-    //mais ao menos
-//    UILabel *label = [[UILabel alloc] init];
-//    [label setTintColor:[UIColor redColor]];
-//    [label setText:@"asdfadsf"];
-    
-    //[[cell contentView] addSubview:label];
-    //[cell addSubview:label];
-    
-    //mais ao menos
-//    UIView *bgView = [[UIView alloc] initWithFrame:cell.backgroundView.frame];
-//    bgView.backgroundColor = [UIColor blueColor];
-//    bgView.layer.borderColor = [[UIColor yellowColor] CGColor];
-//    bgView.layer.borderWidth = 4;
-//    //cell.selectedBackgroundView = bgView;
-//    cell.BackgroundView = bgView;
-    
-    //UIView
-    //mais ao menos
-//    UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, cell.bounds.size.width, 50)];
-//    title.tag = 200;
-//    title.text = @"Tone";
-//    [title setTintColor:[UIColor redColor]];
-//    [cell.contentView addSubview:title];
-    
     return cell;
 }
 
@@ -392,16 +357,6 @@
     
     
     //close viewcontroller
-    //NSLog(@"The presented VC: %@", [[self presentedViewController] description]);
-//    UIViewController *xxx = [self presentedViewController];
-//    UIViewController *yyy = viewController;
-//    UINavigationController *zzz = [self navigationController];
-//    UIViewController *ttt = [viewController presentingViewController];
-//    UIViewController *ttt2 = [viewController presentedViewController];
-    
-    //[[self presentedViewController] dismissViewControllerAnimated:YES completion:nil];
-    //[self dismissViewControllerAnimated:YES completion: nil];
-    //[[self navigationController] dismissViewControllerAnimated:YES completion:nil];
     [[self navigationController] popViewControllerAnimated:YES];
     
 }
