@@ -49,7 +49,7 @@ Soon...
 
 ## Technical requirements
 
-**OS:** iOS6
+**OS:** iOS9
 
 
 
@@ -58,14 +58,22 @@ Soon...
 
 ## Changelog
 
-###### Version: 0.1
-Launch date: 2014-06-xx
+###### Version: 1.0
+Launch date: 2014-09-02
 
 Features:
 
 - Scales 
 - Notes by scale
 - Chords by scale
+
+
+###### Version: 2.0
+Launch date: 2016-06-xx
+
+Features:
+
+- Rewrite in Swift
 
 
 

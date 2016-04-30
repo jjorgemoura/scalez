@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4A1A2D41CD4C83000190A14 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B4A1A2D21CD4C83000190A14 /* LICENSE */; };
+		B4A1A2D51CD4C83000190A14 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B4A1A2D31CD4C83000190A14 /* README.md */; };
 		CF32A2991BBFEE34008122CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32A2981BBFEE34008122CC /* AppDelegate.swift */; };
 		CF32A29E1BBFEE34008122CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF32A29C1BBFEE34008122CC /* Main.storyboard */; };
 		CF32A2A01BBFEE34008122CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF32A29F1BBFEE34008122CC /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B4A1A2D21CD4C83000190A14 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		B4A1A2D31CD4C83000190A14 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		CF32A2951BBFEE34008122CC /* scalez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scalez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF32A2981BBFEE34008122CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF32A29D1BBFEE34008122CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4A1A2D11CD4C7EA00190A14 /* legal */ = {
+			isa = PBXGroup;
+			children = (
+				B4A1A2D21CD4C83000190A14 /* LICENSE */,
+				B4A1A2D31CD4C83000190A14 /* README.md */,
+			);
+			name = legal;
+			sourceTree = "<group>";
+		};
 		CF32A28C1BBFEE34008122CC = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 				CF62C68C1BBFEEF800766524 /* controller */,
 				CF62C68E1BBFEF2600766524 /* view */,
 				CF62C68D1BBFEF0500766524 /* others */,
+				B4A1A2D11CD4C7EA00190A14 /* legal */,
 			);
 			path = scalez;
 			sourceTree = "<group>";
@@ -260,6 +274,7 @@
 			files = (
 				CF32A2A31BBFEE34008122CC /* LaunchScreen.storyboard in Resources */,
 				CF32A2A01BBFEE34008122CC /* Assets.xcassets in Resources */,
+				B4A1A2D41CD4C83000190A14 /* LICENSE in Resources */,
 				CF32A29E1BBFEE34008122CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4A1A2D51CD4C83000190A14 /* README.md in Sources */,
 				CF32A2991BBFEE34008122CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
