@@ -1,0 +1,14 @@
+disabled_rules:
+  - line_length
+  - variable_name_max_length
+  - type_name
+  - variable_name
+  - nesting
+  - type_body_length
+  - file_length
+  - function_body_length
+  - cyclomatic_complexity
+excluded:
+  - Tests
+  - Pods
+  - Sources/Common/External/CocoaLumberjack.swift
