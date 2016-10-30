@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B4A1A2D41CD4C83000190A14 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B4A1A2D21CD4C83000190A14 /* LICENSE */; };
+		B4ED97BD1DC63FA700E04530 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ED97BC1DC63FA700E04530 /* MainViewController.swift */; };
 		CF32A2991BBFEE34008122CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32A2981BBFEE34008122CC /* AppDelegate.swift */; };
 		CF32A29E1BBFEE34008122CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF32A29C1BBFEE34008122CC /* Main.storyboard */; };
 		CF32A2A01BBFEE34008122CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF32A29F1BBFEE34008122CC /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		B4A1A2D21CD4C83000190A14 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		B4A1A2D31CD4C83000190A14 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		B4ED97BC1DC63FA700E04530 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CF32A2951BBFEE34008122CC /* scalez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scalez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF32A2981BBFEE34008122CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF32A29D1BBFEE34008122CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B47B69381DC5EF900010905E /* resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		B4A1A2D11CD4C7EA00190A14 /* legal */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +120,7 @@
 				CF62C68C1BBFEEF800766524 /* controller */,
 				CF62C68E1BBFEF2600766524 /* view */,
 				CF62C68D1BBFEF0500766524 /* others */,
+				B47B69381DC5EF900010905E /* resources */,
 				B4A1A2D11CD4C7EA00190A14 /* legal */,
 			);
 			path = scalez;
@@ -138,14 +148,15 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = model;
+			path = model;
 			sourceTree = "<group>";
 		};
 		CF62C68C1BBFEEF800766524 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				B4ED97BC1DC63FA700E04530 /* MainViewController.swift */,
 			);
-			name = controller;
+			path = controller;
 			sourceTree = "<group>";
 		};
 		CF62C68D1BBFEF0500766524 /* others */ = {
@@ -153,6 +164,7 @@
 			children = (
 				CF32A2981BBFEE34008122CC /* AppDelegate.swift */,
 				CF32A29C1BBFEE34008122CC /* Main.storyboard */,
+				CF32A2A11BBFEE34008122CC /* LaunchScreen.storyboard */,
 				CF32A29F1BBFEE34008122CC /* Assets.xcassets */,
 				CF32A2A41BBFEE34008122CC /* Info.plist */,
 			);
@@ -162,9 +174,8 @@
 		CF62C68E1BBFEF2600766524 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				CF32A2A11BBFEE34008122CC /* LaunchScreen.storyboard */,
 			);
-			name = view;
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,11 +251,13 @@
 					};
 					CF32A2A81BBFEE34008122CC = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 6CHZFW8V57;
 						LastSwiftMigration = 0810;
 						TestTargetID = CF32A2941BBFEE34008122CC;
 					};
 					CF32A2B31BBFEE34008122CC = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 6CHZFW8V57;
 						LastSwiftMigration = 0810;
 						TestTargetID = CF32A2941BBFEE34008122CC;
 					};
@@ -304,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF32A2991BBFEE34008122CC /* AppDelegate.swift in Sources */,
+				B4ED97BD1DC63FA700E04530 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +478,7 @@
 				PROVISIONING_PROFILE = "934f34f4-1d54-48f6-84ee-8f716916949f";
 				PROVISIONING_PROFILE_SPECIFIER = ScalezDevCert;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -472,6 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-ios";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				INFOPLIST_FILE = scalez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -480,6 +496,7 @@
 				PROVISIONING_PROFILE = "934f34f4-1d54-48f6-84ee-8f716916949f";
 				PROVISIONING_PROFILE_SPECIFIER = ScalezDevCert;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -487,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				INFOPLIST_FILE = scalezTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.scalezTests;
@@ -500,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				INFOPLIST_FILE = scalezTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.scalezTests;
@@ -512,6 +531,7 @@
 		CF32A2C41BBFEE34008122CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				INFOPLIST_FILE = scalezUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.scalezUITests;
@@ -525,6 +545,7 @@
 		CF32A2C51BBFEE34008122CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				INFOPLIST_FILE = scalezUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.scalezUITests;
