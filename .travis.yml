@@ -1,19 +1,19 @@
 
 language: objective-c
+dist: osx
+os: osx
+group: stable
+
 osx_image: xcode8.1
+xcode_sdk: iphonesimulator10.1
 
-
-xcode_project: scalez.xcodeproj #3
-xcode_scheme: scalez #4
-#xcode_sdk: iphonesimulator10.1 #5
+xcode_project: scalez.xcodeproj
+xcode_scheme: scalez
 
 
 script: xcodebuild -project scalez.xcodeproj -target scalez -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 
 
-#notifications:
-#  slack:
-#    secure: Y5ZL6OcprSzAYQ3yVpvrhiQn1UQGd7reKNz3o7+7Bcy2k7DMr66xKBadTv1gK1Qrg9LugsmZ4CqOqKBwy7t5smktan/wsUo5y5HX3WUOG1nk0jQ4HOOZNT8bhUZc/Eu7ilH5UMqvIVsjrX9BjEZMeT4TxTIUD8zj5xUwgiAsD5k=
-#  email:
-#    on_success: never
-#    on_failure: always
+notifications:
+  slack:
+    secure: YRehKQXm1IYcDuwmYlcHqshtrrQ5000jrYrWzhLpa1VOo7Y7SKYbu361BOXbC3OkkQefq65LOrOBcoheF4rX8HBF0AoN4RWjJDgj+SJLY8yqfn/ZdZRKRhXPIz9HMFRfYlHj5iABzB4p7qQFeFRI8jrWvCIbbu8JnOyww/5XbcxZxZrpogwM1O0I27h9vJe8ZPsfNAPZ20G5TMGXNNzwjyR4WVLW9ZqJ43A3zHck+SXXeW/LpQmeUO40GR1PJGX4qYw0lMYgU0hjKNgYZ4NojXn0m6Y94xK1G4ZBGP0YCO5jKB2X39FarH9CuCbHezdXfnr2uR+nvjKgGVvnB6DlnYpGFHBu6GU+lGqq7rOaRGZq1kAryUu4LT+CmU6eJ4nDvdgmdcbddwp6CD2iJY0sDwcvH1LWqSpbXT/9LfBpStnCymWMWE6gwFuOhy4TIg3EDx27K/kjoh4IQ1SXygMbGaHPb4mtmcAycubH3big3H1d4LRxyk6Lv+1SU7kDdwItYvlwWcD338vWO+3l+KAyuPd1JnciOGn2jYbIUmaZYlJjatigygHbFnj7jrvuswyh0gumW/243kxx51HuGJodKBMUrzvJ7hEBR7AkIqjIdXg8fwDzxspQ9arWv6ZEw+wH067cdMXt/kuvQwWoCCoQN8Pdp6Sy2I5yTBeYnQi/Qbw=
