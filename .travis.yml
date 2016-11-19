@@ -1,6 +1,8 @@
-language: objective-c
 
-osx_image: xcode8.1 #2
+language: objective-c
+osx_image: xcode8.1
+
+
 xcode_project: scalez.xcodeproj #3
 xcode_scheme: scalez #4
-xcode_sdk: iphonesimulator10.1 #5
+#xcode_sdk: iphonesimulator10.1 #5
