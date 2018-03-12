@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B4A1A2D41CD4C83000190A14 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B4A1A2D21CD4C83000190A14 /* LICENSE */; };
-		B4ED97BD1DC63FA700E04530 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ED97BC1DC63FA700E04530 /* MainViewController.swift */; };
 		CF32A2991BBFEE34008122CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32A2981BBFEE34008122CC /* AppDelegate.swift */; };
-		CF32A29E1BBFEE34008122CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF32A29C1BBFEE34008122CC /* Main.storyboard */; };
 		CF32A2A01BBFEE34008122CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF32A29F1BBFEE34008122CC /* Assets.xcassets */; };
 		CF32A2A31BBFEE34008122CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF32A2A11BBFEE34008122CC /* LaunchScreen.storyboard */; };
 		CF32A2AE1BBFEE34008122CC /* scalezTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32A2AD1BBFEE34008122CC /* scalezTests.swift */; };
@@ -37,10 +35,8 @@
 /* Begin PBXFileReference section */
 		B4A1A2D21CD4C83000190A14 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		B4A1A2D31CD4C83000190A14 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		B4ED97BC1DC63FA700E04530 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CF32A2951BBFEE34008122CC /* scalez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scalez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF32A2981BBFEE34008122CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF32A29D1BBFEE34008122CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF32A29F1BBFEE34008122CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF32A2A21BBFEE34008122CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF32A2A41BBFEE34008122CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,9 +112,6 @@
 		CF32A2971BBFEE34008122CC /* scalez */ = {
 			isa = PBXGroup;
 			children = (
-				CF62C68B1BBFEEEF00766524 /* model */,
-				CF62C68C1BBFEEF800766524 /* controller */,
-				CF62C68E1BBFEF2600766524 /* view */,
 				CF62C68D1BBFEF0500766524 /* others */,
 				B47B69381DC5EF900010905E /* resources */,
 				B4A1A2D11CD4C7EA00190A14 /* legal */,
@@ -144,38 +137,15 @@
 			path = scalezUITests;
 			sourceTree = "<group>";
 		};
-		CF62C68B1BBFEEEF00766524 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		CF62C68C1BBFEEF800766524 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				B4ED97BC1DC63FA700E04530 /* MainViewController.swift */,
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
 		CF62C68D1BBFEF0500766524 /* others */ = {
 			isa = PBXGroup;
 			children = (
 				CF32A2981BBFEE34008122CC /* AppDelegate.swift */,
-				CF32A29C1BBFEE34008122CC /* Main.storyboard */,
 				CF32A2A11BBFEE34008122CC /* LaunchScreen.storyboard */,
 				CF32A29F1BBFEE34008122CC /* Assets.xcassets */,
 				CF32A2A41BBFEE34008122CC /* Info.plist */,
 			);
 			name = others;
-			sourceTree = "<group>";
-		};
-		CF62C68E1BBFEF2600766524 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,25 +210,25 @@
 		CF32A28D1BBFEE34008122CC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Jorge Moura";
 				TargetAttributes = {
 					CF32A2941BBFEE34008122CC = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 6CHZFW8V57;
-						LastSwiftMigration = 0810;
-						ProvisioningStyle = Manual;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
 					};
 					CF32A2A81BBFEE34008122CC = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 6CHZFW8V57;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0920;
 						TestTargetID = CF32A2941BBFEE34008122CC;
 					};
 					CF32A2B31BBFEE34008122CC = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 6CHZFW8V57;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0920;
 						TestTargetID = CF32A2941BBFEE34008122CC;
 					};
 				};
@@ -291,7 +261,6 @@
 				CF32A2A31BBFEE34008122CC /* LaunchScreen.storyboard in Resources */,
 				CF32A2A01BBFEE34008122CC /* Assets.xcassets in Resources */,
 				B4A1A2D41CD4C83000190A14 /* LICENSE in Resources */,
-				CF32A29E1BBFEE34008122CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +286,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF32A2991BBFEE34008122CC /* AppDelegate.swift in Sources */,
-				B4ED97BD1DC63FA700E04530 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,14 +321,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CF32A29C1BBFEE34008122CC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF32A29D1BBFEE34008122CC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CF32A2A11BBFEE34008122CC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -380,14 +340,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = NO;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -410,13 +376,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -429,14 +395,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = NO;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -453,12 +425,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -470,14 +442,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-ios";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				INFOPLIST_FILE = scalez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.scalez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "934f34f4-1d54-48f6-84ee-8f716916949f";
-				PROVISIONING_PROFILE_SPECIFIER = ScalezDevCert;
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -488,14 +461,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-ios";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				INFOPLIST_FILE = scalez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.scalez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "934f34f4-1d54-48f6-84ee-8f716916949f";
-				PROVISIONING_PROFILE_SPECIFIER = ScalezDevCert;
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -509,7 +483,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.scalezTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/scalez.app/scalez";
 			};
 			name = Debug;
@@ -523,7 +497,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.scalezTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/scalez.app/scalez";
 			};
 			name = Release;
@@ -536,7 +510,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.scalezUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				TEST_TARGET_NAME = scalez;
 				USES_XCTRUNNER = YES;
 			};
@@ -550,7 +524,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.scalezUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				TEST_TARGET_NAME = scalez;
 				USES_XCTRUNNER = YES;
 			};
