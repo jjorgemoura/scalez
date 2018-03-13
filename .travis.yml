@@ -1,19 +1,67 @@
-
-language: objective-c
-dist: osx
-os: osx
-group: stable
-
-osx_image: xcode8.1
-xcode_sdk: iphonesimulator10.1
-
-xcode_project: scalez.xcodeproj
-xcode_scheme: scalez
-
-
-script: xcodebuild -project scalez.xcodeproj -target scalez -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-
-
+# notification options
 notifications:
+  email: false
   slack:
-    secure: YRehKQXm1IYcDuwmYlcHqshtrrQ5000jrYrWzhLpa1VOo7Y7SKYbu361BOXbC3OkkQefq65LOrOBcoheF4rX8HBF0AoN4RWjJDgj+SJLY8yqfn/ZdZRKRhXPIz9HMFRfYlHj5iABzB4p7qQFeFRI8jrWvCIbbu8JnOyww/5XbcxZxZrpogwM1O0I27h9vJe8ZPsfNAPZ20G5TMGXNNzwjyR4WVLW9ZqJ43A3zHck+SXXeW/LpQmeUO40GR1PJGX4qYw0lMYgU0hjKNgYZ4NojXn0m6Y94xK1G4ZBGP0YCO5jKB2X39FarH9CuCbHezdXfnr2uR+nvjKgGVvnB6DlnYpGFHBu6GU+lGqq7rOaRGZq1kAryUu4LT+CmU6eJ4nDvdgmdcbddwp6CD2iJY0sDwcvH1LWqSpbXT/9LfBpStnCymWMWE6gwFuOhy4TIg3EDx27K/kjoh4IQ1SXygMbGaHPb4mtmcAycubH3big3H1d4LRxyk6Lv+1SU7kDdwItYvlwWcD338vWO+3l+KAyuPd1JnciOGn2jYbIUmaZYlJjatigygHbFnj7jrvuswyh0gumW/243kxx51HuGJodKBMUrzvJ7hEBR7AkIqjIdXg8fwDzxspQ9arWv6ZEw+wH067cdMXt/kuvQwWoCCoQN8Pdp6Sy2I5yTBeYnQi/Qbw=
+    rooms:
+      secure: Au0K922OZijH3BHVMrasF4sYp6BCWtbRYyI60tnFx6SCjnDMmZfDjIFRwlrLqbe/GUcWludUICHUpwlztsErGJkvm4Xw3JLeqgNQE8pbwXku9kdDiqXLIZNdRT6GmnEEITChrwiRmHYtTS3wcQbapFk1rLWR+8leIn8ow3+zIWnla3aZ5UTWHgU+k1HZNFRcgpoH8y4uKKPQ3XPXrhwkEpbB3ywmiYZgUsPpvqMq7NeJASGHoqLxKiNkLqyKIeyvT+7boEM3smbg0mzc+uC0SFVP6BZ1rfAVjFag8pK01UVctQhfxtFgaM/KbipJcTvqoOwxxz4XRYfZBlFQeEElqtA63TiNMOlHcDdYUJABszUyxA1/3NjSN/WwczFRAN7bCFUYE/NDMMbbeptapdjfGRgBa7EsMFES2tUpicDO4cZNZg19Ymjut5BVTto2luov7FPKbefQJcOxynoS+e5+I8w4qoAlRgOdgyBBIP1BA2vDvs9ECvXp+6wJb++lVyTibrQozdhCN2Lk3dSo2gCJjc94zuHnsm1girhZuRQbJmaHorQ+y0DYCsNgpVrgugMbPai0C/RY7oBunvcrYskQXClqWMM1mB3g4z5ALTeK0rNlxkKEwH8G4idUjRN/3afWaAP9RpM3EQPon60msuhMsTufmXLafX5twTYki8OoB08=
+    on_success: always
+    on_failure: always
+
+
+# language
+language: objective-c
+
+# language options
+osx_image: xcode9.2
+
+# branches to run
+
+
+# environment variables
+env:
+  # global: the same across all matrix possibilities
+  global:
+    - LANG=en_US.UTF-8
+
+    - PROJECT="scalez.xcodeproj"
+    - IOS_SCHEME="scalez"
+
+    - IOS_SDK=iphonesimulator11.2
+
+  # matrix: a new build for each specified variable
+  matrix:
+    - DESTINATION="OS=11.1,name=iPhone X"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    # - DESTINATION="OS=11.1,name=iPhone 8 Plus"                          SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    - DESTINATION="OS=11.1,name=iPhone 8"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    # - DESTINATION="OS=11.1,name=iPhone SE"                              SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+
+    # - DESTINATION="OS=11.1,name=iPad (5th generation)"                  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    # - DESTINATION="OS=11.1,name=iPad Air 2"                             SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    - DESTINATION="OS=11.1,name=iPad Pro (10.5-inch)"                   SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    # - DESTINATION="OS=11.1,name=iPad Pro (12.9-inch) (2nd generation)"  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+
+
+####################
+## begin build steps
+
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+  - fastlane update_fastlane
+
+before_script:
+  - carthage bootstrap --platform iOS
+
+script:
+- xcodebuild analyze test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Debug -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
+- fastlane do_ui_tests
+# - fastlane do_danger_check
+
+after_success:
+- bash <(curl -s https://codecov.io/bash) -J 'scalez'
+# - fastlane do_build_version buildID:$TRAVIS_JOB_NUMBER
+# - git commit -a -m "Committed by Travis-CI build number: $TRAVIS_JOB_NUMBER"
+
+
+####################
+## Deployment options
