@@ -1,0 +1,4 @@
+app_identifier "com.jjorgemoura.sapataz"
+
+apple_id ENV["FASTLANE_APPLEID"]
+team_id ENV["FASTLANE_TEAMID"]

@@ -1,0 +1,26 @@
+author: "Jorge Moura"
+author_url: http://www.jjorgemoura.com
+copyright: Copyright © 2017 Jorge Moura
+readme: README.md
+
+module: sapataz
+module_version: 0.0.1
+
+github_url: https://github.com/jjorgemoura/sapataz
+github_file_prefix: https://github.com/jjorgemoura/sapataz/tree/master
+
+# documentation: docs/documentation/*.md
+# root_url:
+docset_icon: docs/resources/docset-icon@2x.png
+# dash_url:
+
+output: docs/output
+theme: apple
+
+sdk: iphoneos
+swift-version: 4.0
+clean: true
+source-directory: Sources/
+
+# podspec: sapataz.podspec
+hide_documentation_coverage: true

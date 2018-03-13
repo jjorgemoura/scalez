@@ -1,0 +1,12 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/jorge/Developer/iOS11/sapataz/Sources/Identifier.swift",
+      "line": 14,
+      "symbol": "Identifier.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/jorge/Developer/iOS11/sapataz"
+}

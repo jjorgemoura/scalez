@@ -1,0 +1,143 @@
+
+# fastlane constants
+fastlane_version "2.64.0"
+default_platform :ios
+
+# constants
+xcode_scheme_main = "sapataz-iOS"
+xcode_scheme_uitests = "sapataz-iOS"
+appleid_user = CredentialsManager::AppfileConfig.try_fetch_value(:apple_id)
+
+
+## ios lanes setup ##
+platform :ios do
+
+  # tests
+  desc "Runs all the tests (unit tests + UI tests)"
+  lane :do_tests do
+    scan(scheme: xcode_scheme_main)
+  end
+
+  # betas
+  desc "Submit a new build to TestFlight. Must send parameter version=MAJOR, MINOR or PATCH"
+  desc "For version use: MAJOR -> a major release of the app || MINOR -> for the release of some new features || PATCH -> for a bug fixes release."
+  lane :do_beta do |option|
+    do_validation option
+    do_resources_check
+    do_tests
+    do_version option
+    do_tag
+    do_documentation
+  end
+
+  # release
+  desc "Deploy a new version to the App Store (NOT WORKING YET)"
+  lane :do_release do
+    precheck
+  end
+
+
+  # auxiliar lanes
+  desc "Runs Check Resources"
+  private_lane :do_resources_check do
+    swiftlint
+  end
+
+  desc "Tag the current version with Xcode's current version"
+  private_lane :do_tag do
+    tagID = "v" + get_version_number
+    add_git_tag(
+      tag: tagID
+    )
+  end
+
+  desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
+  private_lane :do_version do |option|
+    if option[:version] == "MAJOR"
+      increment_version_number(
+        bump_type: "major"
+      )
+    end
+    if option[:version] == "MINOR"
+      increment_version_number(
+        bump_type: "minor"
+      )
+    end
+    if option[:version] == "PATCH"
+      increment_version_number(
+        bump_type: "patch"
+      )
+    end
+  end
+
+  desc "Validate the version command and the branch"
+  private_lane :do_validation do |option|
+
+    if git_branch != "master"
+      UI.error "ATTENTION: Please, run this commmand on branch master!!!"
+      abort
+    end
+
+    if option[:version]
+      UI.important "Validating the version bump parameter with value: " + option[:version]
+      if option[:version] != "MAJOR" && option[:version] != "MINOR" && option[:version] != "PATCH"
+        UI.error "ATTENTION: Please, user the parameter 'version' with the values MAJOR, MINOR or PATCH!!!"
+        abort
+      end
+    else
+      UI.error "ATTENTION: Please, use the parameter 'version' to set the bump desired!!!"
+      abort
+    end
+  end
+
+  desc "Runs Danger"
+  private_lane :do_danger_check do
+    danger(
+      verbose: true
+    )
+  end
+
+  desc "Runs Documentation"
+  lane :do_documentation do
+    jazzy(config: ".jazzy.yaml")
+  end
+
+  desc "Increment Xcode's build version. Pass parameter buildID:XXXXX"
+  lane :do_build_version do |option|
+    if git_branch != "master"
+      abort
+    end
+    # build_number = get_build_number().to_i + 1
+    build_number = ""
+
+    if option[:buildID]
+      build_number = option[:buildID]
+    end
+
+    UI.important "Set the Build Version with value: #{build_number}"
+    increment_build_number(
+      build_number: build_number
+    )
+  end
+
+
+  # constants
+  before_all do
+    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+  end
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end

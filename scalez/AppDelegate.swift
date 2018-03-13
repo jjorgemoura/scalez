@@ -1,20 +1,41 @@
 //
 //  AppDelegate.swift
-//  scalez
+//  toscoz
 //
-//  Created by Jorge Moura on 03/10/2015.
-//  Copyright © 2015 Jorge Moura. All rights reserved.
+//  Created by Jorge Moura on 17/06/2017.
+//  Copyright © 2017 Jorge Moura. All rights reserved.
 //
 
+import RxSwift
 import UIKit
 
+/// The application AppDelegate.
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    private let disposeBag: DisposeBag = DisposeBag()
+    private var appCoordinator: AppCoordinator?
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow()
+        if let window = window {
+            appCoordinator = AppCoordinator(window: window)
+            appCoordinator?.start()
+                .subscribe()
+                .disposed(by: disposeBag)
+
+            window.makeKeyAndVisible()
+        }
         return true
     }
+
+//    ---deinit -> @String(describing: type(of: self))@ || @self@
 }
+
+//extension AppDelegate {
+//    static var shared: AppDelegate {
+//        return UIApplication.shared.delegate as! AppDelegate
+//    }
+//}

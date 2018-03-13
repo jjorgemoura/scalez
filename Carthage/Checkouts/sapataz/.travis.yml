@@ -1,0 +1,52 @@
+notifications:
+  email: false
+  slack:
+    rooms:
+      - secure: tJZantT+f8uNPq3w0Y5UFezlpy1g6O5sHOnHi5x0K8yP6RPnQjStivHXvRCExzRJCIRvnv4k7Ha8ZULcc//JN2BcgnYIR0f4IF5N6OG20238MRS0IRjT+TPa2IWYfqyC7w4Qnea4tc4fhkOR9zVmr/EZfZ0M9srGC/vaxzDwmJb/f/1SZdaDvjjqKtl0KCT8cR/oFjT/+QPhTT6lH0m8AGdZjW6/4HhVVjzl3SJ/vfgdZe0mAFbgYT+AJpyjK5hvtgkjDjSu6K9q0Xn8mX28+WtxvzJuJQbOpupP2fXCZQMPGWuvHai7PWFq4NuFHd/af4fzMzwlVJBViXlPIxFNZas5OwqUBbRSgmbXf8xdBX9rY1T5skikfiIif0Yr+9AM2JD99r2b3J+LmAFIW80CAO4SvamF2rTdGUVogWdU7nRPIH3VaVUJGNVsmG39m05K8rVH2gJGw93+SOm5N05WP789kx8ZEilGFPRSkUmp/snNwpZZMZpN0lLq35tnkJ0YGiArevjqq3PPgugmSMPifu4D4ThNJcTLuhc81JCZzRIbdt+RkXTaDCMtOCaJIRLJMJqMUxsGs5TTfFUS2lWbObLjnNise9XHBuiRhu/+mxfhc4UipC+CusrYIZP/pFhFfDsNj8RU8PieuUbNoxzty/n1OdDeTqVEZmY6rmFAuc4=
+    on_success: always
+    on_failure: always
+
+# language
+language: objective-c
+
+# language options
+osx_image: xcode9.1
+
+# branches to run
+
+
+# environment variables
+env:
+  # global: the same across all matrix possibilities
+  global:
+    - LANG=en_US.UTF-8
+
+    - PROJECT="sapataz.xcodeproj"
+    - IOS_SCHEME="sapataz-iOS"
+
+    - IOS_SDK=iphonesimulator11.1
+
+  # matrix: a new build for each specified variable
+  matrix:
+    - DESTINATION="OS=11.1,name=iPhone X" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+
+
+####################
+## begin build steps
+
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+  - fastlane update_fastlane
+
+before_script:
+  - carthage bootstrap --platform iOS
+
+script:
+- xcodebuild analyze test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Debug -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
+# - fastlane do_danger_check
+
+after_success:
+- bash <(curl -s https://codecov.io/bash) -J 'sapataz'
+# - fastlane do_build_version buildID:$TRAVIS_JOB_NUMBER
+# - git commit -a -m "Committed by Travis-CI build number: $TRAVIS_JOB_NUMBER"
