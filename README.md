@@ -1,6 +1,8 @@
 Scalez
 ======
 
+**2020 Note: This code end up being a app available in the app store around 2014/2015. The app is not available anymore in the store. This repo in now archived**
+
 This application targets all musicians, helping them to access to useful information about the most common music scales.
 
 In each scale detail it is presented information about the scale notes, harmonic field, chords and tetrad chords, additional chords, among other information.
